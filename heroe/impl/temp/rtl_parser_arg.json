@@ -1,0 +1,37 @@
+{
+ "Device" : "GW2A-18C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/fsm.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/keypad.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_letras.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

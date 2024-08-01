@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" T_Register="35(0)" T_Alu="27(0)" T_Lut="22(0)">
+    <SubModule name="keypad" Register="35" Alu="27" Lut="22" T_Register="35(35)" T_Alu="27(27)" T_Lut="22(22)"/>
+</Module>
