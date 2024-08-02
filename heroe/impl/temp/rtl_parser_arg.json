@@ -14,6 +14,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/generador_obstaculos.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/keypad.v",
    "Type" : "verilog"
   },

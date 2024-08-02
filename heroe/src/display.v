@@ -3,6 +3,7 @@ module display (
     input [2:0] presente,
     input [27:0] display_menu,
     input [6:0] heroe,
+    input [20:0] display_obs,
     output reg [6:0] displayout,
     output reg [7:0] selector
 
@@ -52,19 +53,19 @@ module display (
         display1 = display_menu[20:14];
         display2 = display_menu[13:7];
         display3 = display_menu[6:0];
-        display4 = 7'd0;
+        display4 = heroe;
         display5 = 7'd0;
         display6 = 7'd0;
-        display7 = heroe;
+        display7 = 7'd0;
       end
       GAME: begin
         display0 = 7'd0;
         display1 = 7'd0;
         display2 = 7'd0;
         display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
+        display4 = display_obs[20:14];
+        display5 = display_obs[13:7];
+        display6 = display_obs[6:0];
         display7 = heroe;
       end
       WL: begin

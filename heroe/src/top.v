@@ -3,7 +3,8 @@ module top (
     input [1:0] W_or_L,
     input [3:0] columna,
     output [3:0] fila,
-    output [6:0] displayout
+    output [6:0] displayout,
+    output wire [7:0] selector
 );
   wire [4:0] key;
   wire keypad_pressed;
@@ -15,12 +16,12 @@ module top (
   wire [3:0] tipo_obs;
   wire [6:0] obstaculo;
 
+
   // wire [1:0] W_or_L;
   wire [2:0] presente;
-
   wire [27:0] display_menu;
 
-  wire [7:0] selector;
+  wire [20:0] display_obs;
 
   fsm fsm (
       .clk(clk),
@@ -43,6 +44,7 @@ module top (
       .presente(presente),
       .display_menu(display_menu),
       .heroe(heroe),
+      .display_obs(display_obs),
       .displayout(displayout),
       .selector(selector)
   );
@@ -64,7 +66,20 @@ module top (
       .keypad_pressed(keypad_pressed),
       .key(key),
       .presente(presente),
-      .tipo_h(tipo_h)
+      .tipo_h(tipo_h),
+      .var_h(var_h)
   );
 
+  generador_obstaculos generador_obstaculos (
+      .clk(clk),
+      .tipo_obs(tipo_obs),
+      .obstaculo(obstaculo),
+      .presente(presente),
+      .display_obs(display_obs)
+  );
+
+  rom_obstaculos rom_obstaculos (
+      .tipo_obs (tipo_obs),
+      .obstaculo(obstaculo)
+  );
 endmodule

@@ -2,23 +2,41 @@ module gw_gao(
     \presente[2] ,
     \presente[1] ,
     \presente[0] ,
-    \display/displayout[6] ,
-    \display/displayout[5] ,
-    \display/displayout[4] ,
-    \display/displayout[3] ,
-    \display/displayout[2] ,
-    \display/displayout[1] ,
-    \display/displayout[0] ,
-    \display/selector[7] ,
-    \display/selector[6] ,
-    \display/selector[5] ,
-    \display/selector[4] ,
-    \display/selector[3] ,
-    \display/selector[2] ,
-    \display/selector[1] ,
-    \display/selector[0] ,
+    \tipo_obs[3] ,
+    \tipo_obs[2] ,
+    \tipo_obs[1] ,
+    \tipo_obs[0] ,
+    \tipo_obs1[3] ,
+    \tipo_obs1[2] ,
+    \tipo_obs1[1] ,
+    \tipo_obs1[0] ,
+    \generador_obstaculos/display_obs[20] ,
+    \generador_obstaculos/display_obs[19] ,
+    \generador_obstaculos/display_obs[18] ,
+    \generador_obstaculos/display_obs[17] ,
+    \generador_obstaculos/display_obs[16] ,
+    \generador_obstaculos/display_obs[15] ,
+    \generador_obstaculos/display_obs[14] ,
+    \generador_obstaculos/display_obs[13] ,
+    \generador_obstaculos/display_obs[12] ,
+    \generador_obstaculos/display_obs[11] ,
+    \generador_obstaculos/display_obs[10] ,
+    \generador_obstaculos/display_obs[9] ,
+    \generador_obstaculos/display_obs[8] ,
+    \generador_obstaculos/display_obs[7] ,
+    \generador_obstaculos/display_obs[6] ,
+    \generador_obstaculos/display_obs[5] ,
+    \generador_obstaculos/display_obs[4] ,
+    \generador_obstaculos/display_obs[3] ,
+    \generador_obstaculos/display_obs[2] ,
+    \generador_obstaculos/display_obs[1] ,
+    \generador_obstaculos/display_obs[0] ,
+    \generador_obstaculos/r_reg[3] ,
+    \generador_obstaculos/r_reg[2] ,
+    \generador_obstaculos/r_reg[1] ,
+    \generador_obstaculos/r_reg[0] ,
     keypad_pressed,
-    \display/clk_barrido ,
+    \generador_obstaculos/clk_obstaculos ,
     tms_pad_i,
     tck_pad_i,
     tdi_pad_i,
@@ -28,23 +46,41 @@ module gw_gao(
 input \presente[2] ;
 input \presente[1] ;
 input \presente[0] ;
-input \display/displayout[6] ;
-input \display/displayout[5] ;
-input \display/displayout[4] ;
-input \display/displayout[3] ;
-input \display/displayout[2] ;
-input \display/displayout[1] ;
-input \display/displayout[0] ;
-input \display/selector[7] ;
-input \display/selector[6] ;
-input \display/selector[5] ;
-input \display/selector[4] ;
-input \display/selector[3] ;
-input \display/selector[2] ;
-input \display/selector[1] ;
-input \display/selector[0] ;
+input \tipo_obs[3] ;
+input \tipo_obs[2] ;
+input \tipo_obs[1] ;
+input \tipo_obs[0] ;
+input \tipo_obs1[3] ;
+input \tipo_obs1[2] ;
+input \tipo_obs1[1] ;
+input \tipo_obs1[0] ;
+input \generador_obstaculos/display_obs[20] ;
+input \generador_obstaculos/display_obs[19] ;
+input \generador_obstaculos/display_obs[18] ;
+input \generador_obstaculos/display_obs[17] ;
+input \generador_obstaculos/display_obs[16] ;
+input \generador_obstaculos/display_obs[15] ;
+input \generador_obstaculos/display_obs[14] ;
+input \generador_obstaculos/display_obs[13] ;
+input \generador_obstaculos/display_obs[12] ;
+input \generador_obstaculos/display_obs[11] ;
+input \generador_obstaculos/display_obs[10] ;
+input \generador_obstaculos/display_obs[9] ;
+input \generador_obstaculos/display_obs[8] ;
+input \generador_obstaculos/display_obs[7] ;
+input \generador_obstaculos/display_obs[6] ;
+input \generador_obstaculos/display_obs[5] ;
+input \generador_obstaculos/display_obs[4] ;
+input \generador_obstaculos/display_obs[3] ;
+input \generador_obstaculos/display_obs[2] ;
+input \generador_obstaculos/display_obs[1] ;
+input \generador_obstaculos/display_obs[0] ;
+input \generador_obstaculos/r_reg[3] ;
+input \generador_obstaculos/r_reg[2] ;
+input \generador_obstaculos/r_reg[1] ;
+input \generador_obstaculos/r_reg[0] ;
 input keypad_pressed;
-input \display/clk_barrido ;
+input \generador_obstaculos/clk_obstaculos ;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
@@ -53,23 +89,41 @@ output tdo_pad_o;
 wire \presente[2] ;
 wire \presente[1] ;
 wire \presente[0] ;
-wire \display/displayout[6] ;
-wire \display/displayout[5] ;
-wire \display/displayout[4] ;
-wire \display/displayout[3] ;
-wire \display/displayout[2] ;
-wire \display/displayout[1] ;
-wire \display/displayout[0] ;
-wire \display/selector[7] ;
-wire \display/selector[6] ;
-wire \display/selector[5] ;
-wire \display/selector[4] ;
-wire \display/selector[3] ;
-wire \display/selector[2] ;
-wire \display/selector[1] ;
-wire \display/selector[0] ;
+wire \tipo_obs[3] ;
+wire \tipo_obs[2] ;
+wire \tipo_obs[1] ;
+wire \tipo_obs[0] ;
+wire \tipo_obs1[3] ;
+wire \tipo_obs1[2] ;
+wire \tipo_obs1[1] ;
+wire \tipo_obs1[0] ;
+wire \generador_obstaculos/display_obs[20] ;
+wire \generador_obstaculos/display_obs[19] ;
+wire \generador_obstaculos/display_obs[18] ;
+wire \generador_obstaculos/display_obs[17] ;
+wire \generador_obstaculos/display_obs[16] ;
+wire \generador_obstaculos/display_obs[15] ;
+wire \generador_obstaculos/display_obs[14] ;
+wire \generador_obstaculos/display_obs[13] ;
+wire \generador_obstaculos/display_obs[12] ;
+wire \generador_obstaculos/display_obs[11] ;
+wire \generador_obstaculos/display_obs[10] ;
+wire \generador_obstaculos/display_obs[9] ;
+wire \generador_obstaculos/display_obs[8] ;
+wire \generador_obstaculos/display_obs[7] ;
+wire \generador_obstaculos/display_obs[6] ;
+wire \generador_obstaculos/display_obs[5] ;
+wire \generador_obstaculos/display_obs[4] ;
+wire \generador_obstaculos/display_obs[3] ;
+wire \generador_obstaculos/display_obs[2] ;
+wire \generador_obstaculos/display_obs[1] ;
+wire \generador_obstaculos/display_obs[0] ;
+wire \generador_obstaculos/r_reg[3] ;
+wire \generador_obstaculos/r_reg[2] ;
+wire \generador_obstaculos/r_reg[1] ;
+wire \generador_obstaculos/r_reg[0] ;
 wire keypad_pressed;
-wire \display/clk_barrido ;
+wire \generador_obstaculos/clk_obstaculos ;
 wire tms_pad_i;
 wire tck_pad_i;
 wire tdi_pad_i;
@@ -144,8 +198,8 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i(keypad_pressed),
-    .data_i({\presente[2] ,\presente[1] ,\presente[0] ,\display/displayout[6] ,\display/displayout[5] ,\display/displayout[4] ,\display/displayout[3] ,\display/displayout[2] ,\display/displayout[1] ,\display/displayout[0] ,\display/selector[7] ,\display/selector[6] ,\display/selector[5] ,\display/selector[4] ,\display/selector[3] ,\display/selector[2] ,\display/selector[1] ,\display/selector[0] }),
-    .clk_i(\display/clk_barrido )
+    .data_i({\presente[2] ,\presente[1] ,\presente[0] ,\tipo_obs[3] ,\tipo_obs[2] ,\tipo_obs[1] ,\tipo_obs[0] ,\tipo_obs1[3] ,\tipo_obs1[2] ,\tipo_obs1[1] ,\tipo_obs1[0] ,\generador_obstaculos/display_obs[20] ,\generador_obstaculos/display_obs[19] ,\generador_obstaculos/display_obs[18] ,\generador_obstaculos/display_obs[17] ,\generador_obstaculos/display_obs[16] ,\generador_obstaculos/display_obs[15] ,\generador_obstaculos/display_obs[14] ,\generador_obstaculos/display_obs[13] ,\generador_obstaculos/display_obs[12] ,\generador_obstaculos/display_obs[11] ,\generador_obstaculos/display_obs[10] ,\generador_obstaculos/display_obs[9] ,\generador_obstaculos/display_obs[8] ,\generador_obstaculos/display_obs[7] ,\generador_obstaculos/display_obs[6] ,\generador_obstaculos/display_obs[5] ,\generador_obstaculos/display_obs[4] ,\generador_obstaculos/display_obs[3] ,\generador_obstaculos/display_obs[2] ,\generador_obstaculos/display_obs[1] ,\generador_obstaculos/display_obs[0] ,\generador_obstaculos/r_reg[3] ,\generador_obstaculos/r_reg[2] ,\generador_obstaculos/r_reg[1] ,\generador_obstaculos/r_reg[0] }),
+    .clk_i(\generador_obstaculos/clk_obstaculos )
 );
 
 endmodule

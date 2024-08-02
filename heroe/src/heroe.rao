@@ -2,31 +2,53 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="display/clk_barrido" trig_type="0" storage_depth="1024" window_num="1" capture_amount="512" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="generador_obstaculos/clk_obstaculos" trig_type="0" storage_depth="64" window_num="1" capture_amount="64" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
             <Bus capture_enable="true" name="presente[2:0]">
                 <Signal>presente[2]</Signal>
                 <Signal>presente[1]</Signal>
                 <Signal>presente[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="display/displayout[6:0]">
-                <Signal>display/displayout[6]</Signal>
-                <Signal>display/displayout[5]</Signal>
-                <Signal>display/displayout[4]</Signal>
-                <Signal>display/displayout[3]</Signal>
-                <Signal>display/displayout[2]</Signal>
-                <Signal>display/displayout[1]</Signal>
-                <Signal>display/displayout[0]</Signal>
+            <Bus capture_enable="true" name="tipo_obs[3:0]">
+                <Signal>tipo_obs[3]</Signal>
+                <Signal>tipo_obs[2]</Signal>
+                <Signal>tipo_obs[1]</Signal>
+                <Signal>tipo_obs[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="display/selector[7:0]">
-                <Signal>display/selector[7]</Signal>
-                <Signal>display/selector[6]</Signal>
-                <Signal>display/selector[5]</Signal>
-                <Signal>display/selector[4]</Signal>
-                <Signal>display/selector[3]</Signal>
-                <Signal>display/selector[2]</Signal>
-                <Signal>display/selector[1]</Signal>
-                <Signal>display/selector[0]</Signal>
+            <Bus capture_enable="true" name="tipo_obs1[3:0]">
+                <Signal>tipo_obs1[3]</Signal>
+                <Signal>tipo_obs1[2]</Signal>
+                <Signal>tipo_obs1[1]</Signal>
+                <Signal>tipo_obs1[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="generador_obstaculos/display_obs[20:0]">
+                <Signal>generador_obstaculos/display_obs[20]</Signal>
+                <Signal>generador_obstaculos/display_obs[19]</Signal>
+                <Signal>generador_obstaculos/display_obs[18]</Signal>
+                <Signal>generador_obstaculos/display_obs[17]</Signal>
+                <Signal>generador_obstaculos/display_obs[16]</Signal>
+                <Signal>generador_obstaculos/display_obs[15]</Signal>
+                <Signal>generador_obstaculos/display_obs[14]</Signal>
+                <Signal>generador_obstaculos/display_obs[13]</Signal>
+                <Signal>generador_obstaculos/display_obs[12]</Signal>
+                <Signal>generador_obstaculos/display_obs[11]</Signal>
+                <Signal>generador_obstaculos/display_obs[10]</Signal>
+                <Signal>generador_obstaculos/display_obs[9]</Signal>
+                <Signal>generador_obstaculos/display_obs[8]</Signal>
+                <Signal>generador_obstaculos/display_obs[7]</Signal>
+                <Signal>generador_obstaculos/display_obs[6]</Signal>
+                <Signal>generador_obstaculos/display_obs[5]</Signal>
+                <Signal>generador_obstaculos/display_obs[4]</Signal>
+                <Signal>generador_obstaculos/display_obs[3]</Signal>
+                <Signal>generador_obstaculos/display_obs[2]</Signal>
+                <Signal>generador_obstaculos/display_obs[1]</Signal>
+                <Signal>generador_obstaculos/display_obs[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="generador_obstaculos/r_reg[3:0]">
+                <Signal>generador_obstaculos/r_reg[3]</Signal>
+                <Signal>generador_obstaculos/r_reg[2]</Signal>
+                <Signal>generador_obstaculos/r_reg[1]</Signal>
+                <Signal>generador_obstaculos/r_reg[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
@@ -73,5 +95,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0110110010100001</GAO_ID>
+    <GAO_ID>1011000010110010</GAO_ID>
 </GAO_CONFIG>

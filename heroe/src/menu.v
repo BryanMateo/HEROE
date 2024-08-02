@@ -41,7 +41,7 @@ module menu (
 
   reg clk_menu;
   reg [27:0] counter_menu = 28'd0;
-  parameter DIVISOR_menu = 28'd27000;
+  parameter DIVISOR_menu = 28'd9000000;
   always @(posedge clk) begin
     counter_menu <= counter_menu + 28'd1;
     if (counter_menu >= (DIVISOR_menu - 1)) counter_menu <= 28'd0;
@@ -52,8 +52,15 @@ module menu (
   always @(posedge clk_menu) begin
     barrido <= barrido + 1'd1;
     case (presente)
+      OFF: begin
+        barrido <= 5'd0;
+        display_menu[6:0]   = 7'd0;
+        display_menu[13:7]  = 7'd0;
+        display_menu[20:14] = 7'd0;
+        display_menu[27:21] = 7'd0;
+      end
       WLCM: begin
-        if (barrido == 5'd7) barrido <= 5'd0;
+        if (barrido >= 5'd7) barrido <= 5'd0;
         case (barrido)
           5'd0: begin
             display_menu[6:0]   = 7'd0;
@@ -107,7 +114,7 @@ module menu (
       end
 
       CH: begin
-        if (barrido == 5'd14) barrido <= 5'd0;
+        if (barrido >= 5'd14) barrido <= 5'd0;
         case (barrido)
           5'd0: begin
             display_menu[6:0]   = 7'd0;
