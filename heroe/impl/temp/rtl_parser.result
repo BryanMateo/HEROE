@@ -8,14 +8,6 @@
   "ModuleName" : "rom_heroe"
  },
  {
-  "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_letras.v",
-  "InstLine" : 1,
-  "InstName" : "rom_letras",
-  "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_letras.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "rom_letras"
- },
- {
   "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
   "InstLine" : 1,
   "InstName" : "rom_obstaculos",
@@ -33,7 +25,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 25,
+    "InstLine" : 26,
     "InstName" : "fsm",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/fsm.v",
     "ModuleLine" : 1,
@@ -41,11 +33,27 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 34,
+    "InstLine" : 35,
     "InstName" : "keypad",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/keypad.v",
     "ModuleLine" : 1,
     "ModuleName" : "keypad"
+   },
+   {
+    "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+    "InstLine" : 43,
+    "InstName" : "display",
+    "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/display.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "display"
+   },
+   {
+    "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+    "InstLine" : 51,
+    "InstName" : "menu",
+    "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/menu.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "menu"
    }
   ]
  }

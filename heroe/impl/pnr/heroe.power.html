@@ -87,7 +87,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Aug  1 22:13:30 2024
+<td>Fri Aug  2 00:25:22 2024
 </td>
 </tr>
 <tr>
@@ -100,22 +100,22 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Total Power (mW)</td>
-<td>106.782</td>
+<td>117.981</td>
 </tr>
 <tr>
 <td class="label">Quiescent Power (mW)</td>
-<td>91.599</td>
+<td>91.600</td>
 </tr>
 <tr>
 <td class="label">Dynamic Power (mW)</td>
-<td>15.184</td>
+<td>26.381</td>
 </tr>
 </table>
 <h2><a name="Thermal_Info">Thermal Information:</a></h2>
 <table class="summary_table">
 <tr>
 <td class="label">Junction Temperature</td>
-<td>28.419</td>
+<td>28.778</td>
 </tr>
 <tr>
 <td class="label">Theta JA</td>
@@ -123,7 +123,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Max Allowed Ambient Temperature</td>
-<td>81.581</td>
+<td>81.222</td>
 </tr>
 </table>
 <h2><a name="Configure_Info">Configure Information:</a></h2>
@@ -192,23 +192,23 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>VCC</td>
 <td>1.000</td>
-<td>10.969</td>
-<td>61.508</td>
-<td>72.477</td>
+<td>20.669</td>
+<td>61.500</td>
+<td>82.170</td>
 </tr>
 <tr>
 <td>VCCX</td>
 <td>2.500</td>
-<td>0.984</td>
+<td>1.333</td>
 <td>11.364</td>
-<td>30.870</td>
+<td>31.740</td>
 </tr>
 <tr>
 <td>VCCIO18</td>
 <td>1.800</td>
-<td>0.974</td>
-<td>0.934</td>
-<td>3.436</td>
+<td>1.323</td>
+<td>0.939</td>
+<td>4.071</td>
 </tr>
 </table>
 <h1><a name="Detail">Power Details</a></h1>
@@ -222,19 +222,19 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>Logic</td>
-<td>0.813</td>
+<td>1.335</td>
 <td>NA</td>
-<td>7.351</td>
+<td>8.430</td>
 </tr>
 <tr>
 <td>IO</td>
-<td>8.267
-<td>3.068
-<td>17.656
+<td>11.097
+<td>4.052
+<td>16.250
 </tr>
 <tr>
 <td>BSRAM</td>
-<td>9.126
+<td>17.928
 <td>NA</td>
 <td>NA</td>
 </tr>
@@ -248,24 +248,28 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>top</td>
-<td>9.939</td>
-<td>9.939(9.939)</td>
+<td>19.263</td>
+<td>19.263(19.263)</td>
+<tr>
+<td>top/display/</td>
+<td>0.270</td>
+<td>0.270(0.000)</td>
 <tr>
 <td>top/fsm/</td>
-<td>0.278</td>
-<td>0.278(0.000)</td>
+<td>0.277</td>
+<td>0.277(0.000)</td>
 <tr>
 <td>top/gw_gao_inst_0/</td>
-<td>9.378</td>
-<td>9.378(9.378)</td>
+<td>18.180</td>
+<td>18.180(18.180)</td>
 <tr>
 <td>top/gw_gao_inst_0/u_icon_top/</td>
 <td>0.005</td>
 <td>0.005(0.000)</td>
 <tr>
 <td>top/gw_gao_inst_0/u_la0_top/</td>
-<td>9.373</td>
-<td>9.373(9.244)</td>
+<td>18.175</td>
+<td>18.175(18.044)</td>
 <tr>
 <td>top/gw_gao_inst_0/u_la0_top/u_ao_crc32/</td>
 <td>0.010</td>
@@ -276,12 +280,16 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <td>0.006(0.000)</td>
 <tr>
 <td>top/gw_gao_inst_0/u_la0_top/u_ao_mem_ctrl/</td>
-<td>9.228</td>
-<td>9.228(0.000)</td>
+<td>18.028</td>
+<td>18.028(0.000)</td>
 <tr>
 <td>top/keypad/</td>
-<td>0.282</td>
-<td>0.282(0.000)</td>
+<td>0.280</td>
+<td>0.280(0.000)</td>
+<tr>
+<td>top/menu/</td>
+<td>0.256</td>
+<td>0.256(0.000)</td>
 </table>
 <h2><a name="By_Clock_Domain">Power By Clock Domain:</a></h2>
 <table class="detail_table">
@@ -293,12 +301,17 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>tck_pad_i</td>
 <td>20.000</td>
-<td>1.616</td>
+<td>3.086</td>
+</tr>
+<tr>
+<td>display_15_2</td>
+<td>100.000</td>
+<td>15.151</td>
 </tr>
 <tr>
 <td>clk</td>
 <td>100.000</td>
-<td>8.292</td>
+<td>0.995</td>
 </tr>
 <tr>
 <td>fsm/clk_WL</td>
@@ -308,12 +321,17 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>keypad/clk_key</td>
 <td>100.000</td>
-<td>0.057</td>
+<td>0.055</td>
 </tr>
 <tr>
 <td>NO CLOCK DOMAIN</td>
 <td>0.000</td>
 <td>0.000</td>
+</tr>
+<tr>
+<td>menu/clk_menu</td>
+<td>100.000</td>
+<td>0.029</td>
 </tr>
 </table>
 </div><!-- content -->

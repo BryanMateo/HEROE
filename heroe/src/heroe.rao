@@ -2,31 +2,31 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="clk" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="display/clk_barrido" trig_type="0" storage_depth="1024" window_num="1" capture_amount="512" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
-            <Signal capture_enable="true">keypad_pressed</Signal>
-            <Bus capture_enable="true" name="key[4:0]">
-                <Signal>key[4]</Signal>
-                <Signal>key[3]</Signal>
-                <Signal>key[2]</Signal>
-                <Signal>key[1]</Signal>
-                <Signal>key[0]</Signal>
-            </Bus>
             <Bus capture_enable="true" name="presente[2:0]">
                 <Signal>presente[2]</Signal>
                 <Signal>presente[1]</Signal>
                 <Signal>presente[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="fsm/futuro[2:0]">
-                <Signal>fsm/futuro[2]</Signal>
-                <Signal>fsm/futuro[1]</Signal>
-                <Signal>fsm/futuro[0]</Signal>
+            <Bus capture_enable="true" name="display/displayout[6:0]">
+                <Signal>display/displayout[6]</Signal>
+                <Signal>display/displayout[5]</Signal>
+                <Signal>display/displayout[4]</Signal>
+                <Signal>display/displayout[3]</Signal>
+                <Signal>display/displayout[2]</Signal>
+                <Signal>display/displayout[1]</Signal>
+                <Signal>display/displayout[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="fsm/TIMER_WL[3:0]">
-                <Signal>fsm/TIMER_WL[3]</Signal>
-                <Signal>fsm/TIMER_WL[2]</Signal>
-                <Signal>fsm/TIMER_WL[1]</Signal>
-                <Signal>fsm/TIMER_WL[0]</Signal>
+            <Bus capture_enable="true" name="display/selector[7:0]">
+                <Signal>display/selector[7]</Signal>
+                <Signal>display/selector[6]</Signal>
+                <Signal>display/selector[5]</Signal>
+                <Signal>display/selector[4]</Signal>
+                <Signal>display/selector[3]</Signal>
+                <Signal>display/selector[2]</Signal>
+                <Signal>display/selector[1]</Signal>
+                <Signal>display/selector[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
@@ -73,5 +73,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1000100110000000</GAO_ID>
+    <GAO_ID>0110110010100001</GAO_ID>
 </GAO_CONFIG>

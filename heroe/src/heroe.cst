@@ -5,10 +5,8 @@
 //Part Number: GW2A-LV18PG256C8/I7
 //Device: GW2A-18
 //Device Version: C
-//Created Time: Thu 08 01 22:05:37 2024
+//Created Time: Fri 08 02 00:07:21 2024
 
-IO_LOC "keypad_pressed" L16;
-IO_PORT "keypad_pressed" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "fila[3]" L9;
 IO_PORT "fila[3]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "fila[2]" N9;

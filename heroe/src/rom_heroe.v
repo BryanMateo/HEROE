@@ -3,14 +3,14 @@ module rom_heroe (
     input [1:0] var_h,
     output reg [6:0] heroe
 );
-  //abcdefg
+  //GFEDCBA
   parameter U = 7'b0111110;
-  parameter I = 7'b0110000;
-  parameter P = 7'b1100111;
-  parameter F = 7'b1000111;
-  parameter E = 7'b1001111;
-  parameter volar = 7'b1000000;
-  parameter saltar = 7'b0000001;
+  parameter I = 7'b0000110;
+  parameter P = 7'b1110011;
+  parameter F = 7'b1110001;
+  parameter E = 7'b1111001;
+  parameter volar = 7'b0000001;
+  parameter saltar = 7'b1000000;
   parameter agacharse = 7'b0001000;
 
   always @(*) begin

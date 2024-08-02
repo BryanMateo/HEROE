@@ -1,66 +1,75 @@
 module gw_gao(
-    keypad_pressed,
-    \key[4] ,
-    \key[3] ,
-    \key[2] ,
-    \key[1] ,
-    \key[0] ,
     \presente[2] ,
     \presente[1] ,
     \presente[0] ,
-    \fsm/futuro[2] ,
-    \fsm/futuro[1] ,
-    \fsm/futuro[0] ,
-    \fsm/TIMER_WL[3] ,
-    \fsm/TIMER_WL[2] ,
-    \fsm/TIMER_WL[1] ,
-    \fsm/TIMER_WL[0] ,
-    clk,
+    \display/displayout[6] ,
+    \display/displayout[5] ,
+    \display/displayout[4] ,
+    \display/displayout[3] ,
+    \display/displayout[2] ,
+    \display/displayout[1] ,
+    \display/displayout[0] ,
+    \display/selector[7] ,
+    \display/selector[6] ,
+    \display/selector[5] ,
+    \display/selector[4] ,
+    \display/selector[3] ,
+    \display/selector[2] ,
+    \display/selector[1] ,
+    \display/selector[0] ,
+    keypad_pressed,
+    \display/clk_barrido ,
     tms_pad_i,
     tck_pad_i,
     tdi_pad_i,
     tdo_pad_o
 );
 
-input keypad_pressed;
-input \key[4] ;
-input \key[3] ;
-input \key[2] ;
-input \key[1] ;
-input \key[0] ;
 input \presente[2] ;
 input \presente[1] ;
 input \presente[0] ;
-input \fsm/futuro[2] ;
-input \fsm/futuro[1] ;
-input \fsm/futuro[0] ;
-input \fsm/TIMER_WL[3] ;
-input \fsm/TIMER_WL[2] ;
-input \fsm/TIMER_WL[1] ;
-input \fsm/TIMER_WL[0] ;
-input clk;
+input \display/displayout[6] ;
+input \display/displayout[5] ;
+input \display/displayout[4] ;
+input \display/displayout[3] ;
+input \display/displayout[2] ;
+input \display/displayout[1] ;
+input \display/displayout[0] ;
+input \display/selector[7] ;
+input \display/selector[6] ;
+input \display/selector[5] ;
+input \display/selector[4] ;
+input \display/selector[3] ;
+input \display/selector[2] ;
+input \display/selector[1] ;
+input \display/selector[0] ;
+input keypad_pressed;
+input \display/clk_barrido ;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire keypad_pressed;
-wire \key[4] ;
-wire \key[3] ;
-wire \key[2] ;
-wire \key[1] ;
-wire \key[0] ;
 wire \presente[2] ;
 wire \presente[1] ;
 wire \presente[0] ;
-wire \fsm/futuro[2] ;
-wire \fsm/futuro[1] ;
-wire \fsm/futuro[0] ;
-wire \fsm/TIMER_WL[3] ;
-wire \fsm/TIMER_WL[2] ;
-wire \fsm/TIMER_WL[1] ;
-wire \fsm/TIMER_WL[0] ;
-wire clk;
+wire \display/displayout[6] ;
+wire \display/displayout[5] ;
+wire \display/displayout[4] ;
+wire \display/displayout[3] ;
+wire \display/displayout[2] ;
+wire \display/displayout[1] ;
+wire \display/displayout[0] ;
+wire \display/selector[7] ;
+wire \display/selector[6] ;
+wire \display/selector[5] ;
+wire \display/selector[4] ;
+wire \display/selector[3] ;
+wire \display/selector[2] ;
+wire \display/selector[1] ;
+wire \display/selector[0] ;
+wire keypad_pressed;
+wire \display/clk_barrido ;
 wire tms_pad_i;
 wire tck_pad_i;
 wire tdi_pad_i;
@@ -135,8 +144,8 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i(keypad_pressed),
-    .data_i({keypad_pressed,\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] ,\presente[2] ,\presente[1] ,\presente[0] ,\fsm/futuro[2] ,\fsm/futuro[1] ,\fsm/futuro[0] ,\fsm/TIMER_WL[3] ,\fsm/TIMER_WL[2] ,\fsm/TIMER_WL[1] ,\fsm/TIMER_WL[0] }),
-    .clk_i(clk)
+    .data_i({\presente[2] ,\presente[1] ,\presente[0] ,\display/displayout[6] ,\display/displayout[5] ,\display/displayout[4] ,\display/displayout[3] ,\display/displayout[2] ,\display/displayout[1] ,\display/displayout[0] ,\display/selector[7] ,\display/selector[6] ,\display/selector[5] ,\display/selector[4] ,\display/selector[3] ,\display/selector[2] ,\display/selector[1] ,\display/selector[0] }),
+    .clk_i(\display/clk_barrido )
 );
 
 endmodule

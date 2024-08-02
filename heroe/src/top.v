@@ -3,10 +3,10 @@ module top (
     input [1:0] W_or_L,
     input [3:0] columna,
     output [3:0] fila,
-    output keypad_pressed
-); 
+    output [6:0] displayout
+);
   wire [4:0] key;
-  //wire keypad_pressed;
+  wire keypad_pressed;
 
   wire [2:0] tipo_h;
   wire [1:0] var_h;
@@ -15,12 +15,13 @@ module top (
   wire [3:0] tipo_obs;
   wire [6:0] obstaculo;
 
-  wire [4:0] letra;
-  wire [6:0] letra_out;
-
- // wire [1:0] W_or_L;
+  // wire [1:0] W_or_L;
   wire fsm_error;
   wire [2:0] presente;
+
+  wire [27:0] display_menu;
+
+   wire [7:0] selector;
 
   fsm fsm (
       .clk(clk),
@@ -37,6 +38,21 @@ module top (
       .fila(fila),
       .key(key),
       .keypad_pressed(keypad_pressed)
+  );
+
+  display display (
+      .clk(clk),
+      .presente(presente),
+      .display_menu(display_menu),
+      .displayout(displayout),
+      .selector(selector)
+  );
+
+  menu menu (
+      .clk(clk),
+      .presente(presente),
+      .letra_out(letra_out),
+      .display_menu(display_menu)
   );
 
 endmodule

@@ -4,10 +4,11 @@
     <Version>beta</Version>
     <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
     <FileList>
+        <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v" type="verilog"/>
+        <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\menu.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_heroe.v" type="verilog"/>
-        <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_letras.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v" type="verilog"/>
         <File path="C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v" type="gao"/>
