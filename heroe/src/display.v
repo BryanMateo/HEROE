@@ -48,14 +48,14 @@ module display (
         display7 = 7'd0;
       end
       CH: begin
-        display0 = 7'd0;
+        display0 = heroe;
         display1 = 7'd0;
         display2 = 7'd0;
         display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display4 = display_menu[6:0];
+        display5 = display_menu[13:7];
+        display6 = display_menu[20:14];
+        display7 = display_menu[27:21];
       end
       GAME: begin
         display0 = 7'd0;
