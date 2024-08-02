@@ -1,7 +1,6 @@
 module menu (
     input clk,
     input [2:0] presente,
-    input [6:0] letra_out,
     output reg [27:0] display_menu
 );
   //PARAMETROS ROM LETRAS
@@ -73,37 +72,36 @@ module menu (
             display_menu[20:14] = O;
             display_menu[27:21] = L;
           end
-          3'd2: begin
+          3'd3: begin
             display_menu[6:0]   = H;
             display_menu[13:7]  = O;
             display_menu[20:14] = L;
             display_menu[27:21] = A;
           end
-          3'd2: begin
+          3'd4: begin
             display_menu[6:0]   = O;
             display_menu[13:7]  = L;
             display_menu[20:14] = A;
             display_menu[27:21] = 7'd0;
           end
-          3'd2: begin
+          3'd5: begin
             display_menu[6:0]   = L;
             display_menu[13:7]  = A;
             display_menu[20:14] = 7'd0;
             display_menu[27:21] = 7'd0;
           end
-          3'd2: begin
+          3'd6: begin
             display_menu[6:0]   = A;
             display_menu[13:7]  = 7'd0;
             display_menu[20:14] = 7'd0;
             display_menu[27:21] = 7'd0;
           end
-          3'd2: begin
+          3'd7: begin
             display_menu[6:0]   = 7'd0;
             display_menu[13:7]  = 7'd0;
             display_menu[20:14] = 7'd0;
             display_menu[27:21] = 7'd0;
           end
-
         endcase
       end
       default: begin

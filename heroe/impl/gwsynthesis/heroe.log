@@ -27,7 +27,7 @@ Compiling module 'fsm'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\f
 Compiling module 'keypad'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v":1)
 Compiling module 'display'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v":1)
 Compiling module 'menu'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\menu.v":1)
-WARN  (EX1998) : Net 'letra_out[6]' does not have a driver("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":19)
+WARN  (EX1998) : Net 'heroe[6]' does not have a driver("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":13)
 Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)

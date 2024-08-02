@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="467(0)" T_Alu="121(0)" T_Lut="563(0)" T_Bsram="2(0)">
-    <SubModule name="gw_gao_inst_0" Register="305" Alu="13" Lut="411" Bsram="2" T_Register="305(305)" T_Alu="13(13)" T_Lut="411(411)" T_Bsram="2(2)"/>
-    <SubModule name="fsm" Register="37" Alu="27" Lut="47" T_Register="37(37)" T_Alu="27(27)" T_Lut="47(47)"/>
-    <SubModule name="keypad" Register="43" Alu="27" Lut="47" T_Register="43(43)" T_Alu="27(27)" T_Lut="47(47)"/>
-    <SubModule name="display" Register="45" Alu="27" Lut="34" T_Register="45(45)" T_Alu="27(27)" T_Lut="34(34)"/>
-    <SubModule name="menu" Register="37" Alu="27" Lut="24" T_Register="37(37)" T_Alu="27(27)" T_Lut="24(24)"/>
-</Module>

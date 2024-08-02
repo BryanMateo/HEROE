@@ -2,6 +2,7 @@ module display (
     input clk,
     input [2:0] presente,
     input [27:0] display_menu,
+    input [6:0] heroe,
     output reg [6:0] displayout,
     output reg [7:0] selector
 

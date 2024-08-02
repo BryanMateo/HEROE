@@ -44,6 +44,7 @@ module top (
       .clk(clk),
       .presente(presente),
       .display_menu(display_menu),
+      .heroe(heroe),
       .displayout(displayout),
       .selector(selector)
   );
@@ -51,7 +52,6 @@ module top (
   menu menu (
       .clk(clk),
       .presente(presente),
-      .letra_out(letra_out),
       .display_menu(display_menu)
   );
 
