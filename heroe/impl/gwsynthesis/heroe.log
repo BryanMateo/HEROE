@@ -6,17 +6,36 @@ Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\r
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_letras.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v'
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v'
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v'
+Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v'
 Compiling module 'top'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":1)
 Compiling module 'fsm'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":1)
-WARN  (EX2420) : Latch inferred for net 'conmutacion'; We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":119)
 Compiling module 'keypad'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v":1)
-WARN  (EX1998) : Net 'W_or_L[1]' does not have a driver("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":19)
+Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
+Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v":74)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Trying to combine GAO to RTL design
 NOTE  (EX0101) : Current top module is "top"
-WARN  (EX0211) : The output port "estado[2]" of module "fsm" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":7)
-WARN  (EX0211) : The output port "estado[1]" of module "fsm" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":7)
-WARN  (EX0211) : The output port "estado[0]" of module "fsm" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":7)
+WARN  (EX0211) : The output port "fsm_error" of module "fsm" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":6)
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input columna is unused("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":3)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -32,7 +51,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "fsm" instantiated to "fsm" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":30)
 [95%] Generate netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 [100%] Generate report file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe_syn.rpt.html" completed
 GowinSynthesis finish

@@ -31,7 +31,7 @@
  ],
  "LoopLimit" : 2000,
  "ResultFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/impl/temp/rtl_parser.result",
- "Top" : "",
+ "Top" : "top",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
 }

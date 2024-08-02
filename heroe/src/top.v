@@ -1,10 +1,12 @@
 module top (
     input clk,
+    input [1:0] W_or_L,
     input [3:0] columna,
-    output [3:0] fila
-);
+    output [3:0] fila,
+    output keypad_pressed
+); 
   wire [4:0] key;
-  wire keypad_pressed;
+  //wire keypad_pressed;
 
   wire [2:0] tipo_h;
   wire [1:0] var_h;
@@ -16,9 +18,9 @@ module top (
   wire [4:0] letra;
   wire [6:0] letra_out;
 
-  wire [1:0] W_or_L;
+ // wire [1:0] W_or_L;
   wire fsm_error;
-  wire [2:0] estado;
+  wire [2:0] presente;
 
   fsm fsm (
       .clk(clk),
@@ -26,7 +28,7 @@ module top (
       .key(key),
       .W_or_L(W_or_L),
       .fsm_error(fsm_error),
-      .estado(estado)
+      .presente(presente)
   );
 
   keypad keypad (

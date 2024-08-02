@@ -1,6 +1,8 @@
 Reading netlist file: "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg"
 Parsing netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 Processing netlist completed
+Reading constraint file: "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\heroe.cst"
+Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
@@ -23,5 +25,5 @@ Generate file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\pnr\heroe
 Generate file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\pnr\heroe.rpt.html" completed
 Generate file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\pnr\heroe.rpt.txt" completed
 Generate file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\pnr\heroe.tr.html" completed
-Thu Aug  1 19:04:00 2024
+Thu Aug  1 22:13:30 2024
 
