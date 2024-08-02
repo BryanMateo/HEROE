@@ -9,6 +9,7 @@ module rom_heroe (
   parameter P = 7'b1110011;
   parameter F = 7'b1110001;
   parameter E = 7'b1111001;
+  
   parameter volar = 7'b0000001;
   parameter saltar = 7'b1000000;
   parameter agacharse = 7'b0001000;

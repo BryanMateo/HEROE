@@ -38,24 +38,24 @@ module display (
         display7 = 7'd0;
       end
       WLCM: begin
-        display0 = display_menu[6:0];
-        display1 = display_menu[13:7];
-        display2 = display_menu[20:14];
-        display3 = display_menu[27:21];
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
-      end
-      CH: begin
-        display0 = heroe;
+        display0 = 7'd0;
         display1 = 7'd0;
         display2 = 7'd0;
         display3 = 7'd0;
-        display4 = display_menu[6:0];
-        display5 = display_menu[13:7];
-        display6 = display_menu[20:14];
-        display7 = display_menu[27:21];
+        display4 = display_menu[27:21];
+        display5 = display_menu[20:14];
+        display6 = display_menu[13:7];
+        display7 = display_menu[6:0];
+      end
+      CH: begin
+        display0 = display_menu[27:21];
+        display1 = display_menu[20:14];
+        display2 = display_menu[13:7];
+        display3 = display_menu[6:0];
+        display4 = 7'd0;
+        display5 = 7'd0;
+        display6 = 7'd0;
+        display7 = heroe;
       end
       GAME: begin
         display0 = 7'd0;
@@ -65,7 +65,7 @@ module display (
         display4 = 7'd0;
         display5 = 7'd0;
         display6 = 7'd0;
-        display7 = 7'd0;
+        display7 = heroe;
       end
       WL: begin
         display0 = 7'd0;

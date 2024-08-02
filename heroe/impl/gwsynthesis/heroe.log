@@ -1,5 +1,6 @@
 GowinSynthesis start
 Running parser ...
+Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\CH.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v'
@@ -27,7 +28,9 @@ Compiling module 'fsm'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\f
 Compiling module 'keypad'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v":1)
 Compiling module 'display'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v":1)
 Compiling module 'menu'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\menu.v":1)
-WARN  (EX1998) : Net 'heroe[6]' does not have a driver("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":13)
+Compiling module 'rom_heroe'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_heroe.v":1)
+Compiling module 'choose_hero'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\CH.v":1)
+WARN  (EX1998) : Net 'var_h[1]' does not have a driver("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":12)
 Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
@@ -38,7 +41,6 @@ Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
 Trying to combine GAO to RTL design
 NOTE  (EX0101) : Current top module is "top"
-WARN  (EX0211) : The output port "fsm_error" of module "fsm" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":6)
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
@@ -55,6 +57,7 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":60)
 [95%] Generate netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 [100%] Generate report file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe_syn.rpt.html" completed
 GowinSynthesis finish

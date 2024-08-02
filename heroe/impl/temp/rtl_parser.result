@@ -1,13 +1,5 @@
 [
  {
-  "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
-  "InstLine" : 1,
-  "InstName" : "rom_heroe",
-  "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "rom_heroe"
- },
- {
   "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
   "InstLine" : 1,
   "InstName" : "rom_obstaculos",
@@ -25,7 +17,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 26,
+    "InstLine" : 25,
     "InstName" : "fsm",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/fsm.v",
     "ModuleLine" : 1,
@@ -33,7 +25,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 35,
+    "InstLine" : 33,
     "InstName" : "keypad",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/keypad.v",
     "ModuleLine" : 1,
@@ -41,7 +33,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 43,
+    "InstLine" : 41,
     "InstName" : "display",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/display.v",
     "ModuleLine" : 1,
@@ -49,11 +41,27 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 52,
+    "InstLine" : 50,
     "InstName" : "menu",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/menu.v",
     "ModuleLine" : 1,
     "ModuleName" : "menu"
+   },
+   {
+    "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+    "InstLine" : 56,
+    "InstName" : "rom_heroe",
+    "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "rom_heroe"
+   },
+   {
+    "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+    "InstLine" : 62,
+    "InstName" : "choose_hero",
+    "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/CH.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "choose_hero"
    }
   ]
  }

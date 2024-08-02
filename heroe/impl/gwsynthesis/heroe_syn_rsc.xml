@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="498(0)" T_Alu="121(0)" T_Lut="691(0)" T_Bsram="2(0)">
-    <SubModule name="gw_gao_inst_0" Register="309" Alu="13" Lut="418" Bsram="2" T_Register="309(309)" T_Alu="13(13)" T_Lut="418(418)" T_Bsram="2(2)"/>
-    <SubModule name="fsm" Register="37" Alu="27" Lut="48" T_Register="37(37)" T_Alu="27(27)" T_Lut="48(48)"/>
-    <SubModule name="keypad" Register="43" Alu="27" Lut="52" T_Register="43(43)" T_Alu="27(27)" T_Lut="52(52)"/>
-    <SubModule name="display" Register="47" Alu="27" Lut="41" T_Register="47(47)" T_Alu="27(27)" T_Lut="41(41)"/>
-    <SubModule name="menu" Register="62" Alu="27" Lut="132" T_Register="62(62)" T_Alu="27(27)" T_Lut="132(132)"/>
+<Module name="top" T_Register="502(0)" T_Alu="121(0)" T_Lut="703(0)" T_Bsram="2(0)">
+    <SubModule name="gw_gao_inst_0" Register="309" Alu="13" Lut="400" Bsram="2" T_Register="309(309)" T_Alu="13(13)" T_Lut="400(400)" T_Bsram="2(2)"/>
+    <SubModule name="fsm" Register="37" Alu="27" Lut="49" T_Register="37(37)" T_Alu="27(27)" T_Lut="49(49)"/>
+    <SubModule name="keypad" Register="43" Alu="27" Lut="49" T_Register="43(43)" T_Alu="27(27)" T_Lut="49(49)"/>
+    <SubModule name="display" Register="47" Alu="27" Lut="60" T_Register="47(47)" T_Alu="27(27)" T_Lut="60(60)"/>
+    <SubModule name="menu" Register="62" Alu="27" Lut="134" T_Register="62(62)" T_Alu="27(27)" T_Lut="134(134)"/>
+    <SubModule name="choose_hero" Register="4" Lut="11" T_Register="4(4)" T_Lut="11(11)"/>
 </Module>

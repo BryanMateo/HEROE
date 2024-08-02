@@ -3,7 +3,6 @@ module fsm (
     input keypad_pressed,
     input [4:0] key,
     input [1:0] W_or_L,
-    output reg fsm_error = 1'b1,
     output reg [2:0] presente
 );
 
@@ -19,6 +18,7 @@ module fsm (
   reg conmutacion = 1'b0;
 
   always @(posedge clk) begin
+    ////////////////////////////////////////////
     if (keypad_pressed) begin
       case (key)
         5'd10: begin  // PWRB
@@ -71,7 +71,7 @@ module fsm (
       conmutacion <= 1'b0;
     end
   end
-
+  ////////////////////////////////////////////
   always @(presente, W_or_L, TIMER_WL) begin
     futuro = presente;
 
@@ -93,7 +93,6 @@ module fsm (
       end
 
       default: begin
-        //fsm_error = 1'b0;
       end
     endcase
   end

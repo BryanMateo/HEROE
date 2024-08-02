@@ -2,6 +2,10 @@
  "Device" : "GW2A-18C",
  "Files" : [
   {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/CH.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/display.v",
    "Type" : "verilog"
   },

@@ -16,19 +16,17 @@ module top (
   wire [6:0] obstaculo;
 
   // wire [1:0] W_or_L;
-  wire fsm_error;
   wire [2:0] presente;
 
   wire [27:0] display_menu;
 
-   wire [7:0] selector;
+  wire [7:0] selector;
 
   fsm fsm (
       .clk(clk),
       .keypad_pressed(keypad_pressed),
       .key(key),
       .W_or_L(W_or_L),
-      .fsm_error(fsm_error),
       .presente(presente)
   );
 
@@ -53,6 +51,20 @@ module top (
       .clk(clk),
       .presente(presente),
       .display_menu(display_menu)
+  );
+
+  rom_heroe rom_heroe (
+      .tipo_h(tipo_h),
+      .var_h (var_h),
+      .heroe (heroe)
+  );
+
+  choose_hero choose_hero (
+      .clk(clk),
+      .keypad_pressed(keypad_pressed),
+      .key(key),
+      .presente(presente),
+      .tipo_h(tipo_h)
   );
 
 endmodule

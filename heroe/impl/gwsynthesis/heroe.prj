@@ -4,6 +4,7 @@
     <Version>beta</Version>
     <Device id="GW2A-18C" package="PBGA256" speed="8" partNumber="GW2A-LV18PG256C8/I7"/>
     <FileList>
+        <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\CH.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v" type="verilog"/>
