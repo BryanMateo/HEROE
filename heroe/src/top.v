@@ -52,6 +52,7 @@ module top (
   menu menu (
       .clk(clk),
       .presente(presente),
+      .W_or_L(W_or_L),
       .display_menu(display_menu)
   );
 
@@ -74,6 +75,7 @@ module top (
       .clk(clk),
       .obstaculo(obstaculo),
       .presente(presente),
+      .W_or_L(W_or_L),
       .clk_obstaculos(clk_obstaculos),
       .tipo_obs(tipo_obs),
       .display_obs(display_obs)

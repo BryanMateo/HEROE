@@ -1,6 +1,7 @@
 module menu (
     input clk,
     input [2:0] presente,
+    input [1:0] W_or_L,
     output reg [27:0] display_menu
 );
   //PARAMETROS ROM LETRAS
@@ -52,10 +53,6 @@ module menu (
   reg [4:0] barrido;
   always @(posedge clk_menu) begin
 
-//clk divider
-
-//clk divider
-
     if (presente != OFF) begin
       barrido <= barrido + 1'd1;
     end else begin
@@ -100,6 +97,36 @@ module menu (
             5'd11: display_menu[27:21] <= O;
             default: display_menu[27:21] <= 7'd0;
           endcase
+        end
+
+        WL: begin
+          if (W_or_L == 2'b10) begin
+            if (barrido >= 5'd11) barrido <= 5'd0;
+            case (barrido)
+              5'd1: display_menu[27:21] <= Y;
+              5'd2: display_menu[27:21] <= O;
+              5'd3: display_menu[27:21] <= U;
+              5'd4: display_menu[27:21] <= 7'd0;
+              5'd5: display_menu[27:21] <= W;
+              5'd6: display_menu[27:21] <= I;
+              5'd7: display_menu[27:21] <= N;
+              default: display_menu[27:21] <= 7'd0;
+            endcase
+          end else if (W_or_L == 2'b01) begin
+            if (barrido >= 5'd12) barrido <= 5'd0;
+            case (barrido)
+              5'd1: display_menu[27:21] <= Y;
+              5'd2: display_menu[27:21] <= O;
+              5'd3: display_menu[27:21] <= U;
+              5'd4: display_menu[27:21] <= 7'd0;
+              5'd5: display_menu[27:21] <= L;
+              5'd6: display_menu[27:21] <= O;
+              5'd7: display_menu[27:21] <= S;
+              5'd8: display_menu[27:21] <= T;
+              default: display_menu[27:21] <= 7'd0;
+            endcase
+          end
+
         end
 
         default: display_menu[27:21] <= 7'd0;

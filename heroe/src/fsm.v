@@ -98,8 +98,8 @@ module fsm (
 
       WL: begin
         case (W_or_L)
-          2'b01:   if (TIMER_WL == 4'd10) futuro = PA;  // timer para LOST
-          2'b10:   if (TIMER_WL == 4'd10) futuro = PA;  // timer para WIN
+          2'b01:   if (TIMER_WL == 4'd15) futuro = PA;  // timer para LOST
+          2'b10:   if (TIMER_WL == 4'd15) futuro = PA;  // timer para WIN
           default: futuro = WL;
         endcase
       end
@@ -133,7 +133,6 @@ module fsm (
     end else begin
       TIMER_WL1 <= 4'd0;
     end
-
   end
 
   reg [27:0] counter_WL = 28'd0;
@@ -146,7 +145,6 @@ module fsm (
     end
     clk_WL <= (counter_WL < DIVISOR_WL / 2) ? 1'b1 : 1'b0;
   end
-
 
   reg clkDBG;
   reg [27:0] counterDBG = 28'd0;

@@ -41,7 +41,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 58,
+    "InstLine" : 59,
     "InstName" : "rom_heroe",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
     "ModuleLine" : 1,
@@ -49,7 +49,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 64,
+    "InstLine" : 65,
     "InstName" : "choose_hero",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/CH.v",
     "ModuleLine" : 1,
@@ -57,7 +57,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 73,
+    "InstLine" : 74,
     "InstName" : "generador_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/generador_obstaculos.v",
     "ModuleLine" : 8,
@@ -65,7 +65,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 82,
+    "InstLine" : 84,
     "InstName" : "rom_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
     "ModuleLine" : 1,
@@ -73,7 +73,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 87,
+    "InstLine" : 89,
     "InstName" : "colision",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/colision.v",
     "ModuleLine" : 1,

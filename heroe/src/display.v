@@ -73,10 +73,10 @@ module display (
         display1 <= 7'd0;
         display2 <= 7'd0;
         display3 <= 7'd0;
-        display4 <= display_obs[20:14];
-        display5 <= display_obs[13:7];
-        display6 <= display_obs[6:0];
-        display7 <= heroe;
+        display4 <= display_menu[27:21];
+        display5 <= display_menu[20:14];
+        display6 <= display_menu[13:7];
+        display7 <= display_menu[6:0];
       end
       PA: begin
         display0 <= 7'd0;

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="743(0)" T_Alu="178(0)" T_Lut="780(0)" T_Bsram="3(0)">
-    <SubModule name="gw_gao_inst_0" Register="394" Alu="13" Lut="436" Bsram="3" T_Register="394(394)" T_Alu="13(13)" T_Lut="436(436)" T_Bsram="3(3)"/>
-    <SubModule name="fsm" Register="70" Alu="54" Lut="69" T_Register="70(70)" T_Alu="54(54)" T_Lut="69(69)"/>
-    <SubModule name="keypad" Register="43" Alu="27" Lut="47" T_Register="43(43)" T_Alu="27(27)" T_Lut="47(47)"/>
-    <SubModule name="display" Register="103" Alu="27" Lut="92" T_Register="103(103)" T_Alu="27(27)" T_Lut="92(92)"/>
-    <SubModule name="menu" Register="65" Alu="30" Lut="45" T_Register="65(65)" T_Alu="30(30)" T_Lut="45(45)"/>
+<Module name="top" T_Register="743(0)" T_Alu="178(0)" T_Lut="797(0)" T_Bsram="3(0)">
+    <SubModule name="gw_gao_inst_0" Register="394" Alu="13" Lut="434" Bsram="3" T_Register="394(394)" T_Alu="13(13)" T_Lut="434(434)" T_Bsram="3(3)"/>
+    <SubModule name="fsm" Register="70" Alu="54" Lut="73" T_Register="70(70)" T_Alu="54(54)" T_Lut="73(73)"/>
+    <SubModule name="keypad" Register="43" Alu="27" Lut="43" T_Register="43(43)" T_Alu="27(27)" T_Lut="43(43)"/>
+    <SubModule name="display" Register="103" Alu="27" Lut="89" T_Register="103(103)" T_Alu="27(27)" T_Lut="89(89)"/>
+    <SubModule name="menu" Register="65" Alu="30" Lut="65" T_Register="65(65)" T_Alu="30(30)" T_Lut="65(65)"/>
     <SubModule name="rom_heroe" Lut="6" T_Lut="6(6)"/>
-    <SubModule name="choose_hero" Register="6" Lut="19" T_Register="6(6)" T_Lut="19(19)"/>
+    <SubModule name="choose_hero" Register="6" Lut="20" T_Register="6(6)" T_Lut="20(20)"/>
     <SubModule name="generador_obstaculos" Register="61" Alu="27" Lut="60" T_Register="61(61)" T_Alu="27(27)" T_Lut="60(60)"/>
-    <SubModule name="colision" Register="1" Lut="6" T_Register="1(1)" T_Lut="6(6)"/>
+    <SubModule name="colision" Register="1" Lut="7" T_Register="1(1)" T_Lut="7(7)"/>
 </Module>
