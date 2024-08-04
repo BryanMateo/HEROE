@@ -59,10 +59,18 @@ module display (
         display7 <= heroe;
       end
       GAME: begin
-        display0 <= 7'd0;
-        display1 <= 7'd0;
-        display2 <= 7'd0;
-        display3 <= 7'd0;
+        // display0 <= 7'd0;
+        // display1 <= 7'd0;
+        // display2 <= 7'd0;
+        // display3 <= 7'd0;
+        // display4 <= display_obs[20:14];
+        // display5 <= display_obs[13:7];
+        // display6 <= display_obs[6:0];
+        // display7 <= heroe;
+        display0 <= display_obs[20:14];
+        display1 <= display_obs[13:7];
+        display2 <= display_obs[6:0];
+        display3 <= heroe;
         display4 <= display_obs[20:14];
         display5 <= display_obs[13:7];
         display6 <= display_obs[6:0];
