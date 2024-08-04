@@ -48,176 +48,64 @@ module menu (
     clk_menu <= (counter_menu < DIVISOR_menu / 2) ? 1'b1 : 1'b0;
   end
 
+  reg [2:0] pasado;
   reg [4:0] barrido;
   always @(posedge clk_menu) begin
+
+//clk divider
+
+//clk divider
+
     if (presente != OFF) begin
       barrido <= barrido + 1'd1;
     end else begin
       barrido <= 5'd0;
+      display_menu[27:21] <= 7'd0;
     end
-  
-    case (presente)
-      OFF: begin
-        barrido <= 5'd0;
-        display_menu[6:0]   = 7'd0;
-        display_menu[13:7]  = 7'd0;
-        display_menu[20:14] = 7'd0;
-        display_menu[27:21] = 7'd0;
-      end
-      WLCM: begin
-        if (barrido >= 5'd7) barrido <= 5'd0;
-        case (barrido)
-          5'd0: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = H;
-          end
-          5'd1: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = H;
-            display_menu[27:21] = O;
-          end
-          5'd2: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = H;
-            display_menu[20:14] = O;
-            display_menu[27:21] = L;
-          end
-          5'd3: begin
-            display_menu[6:0]   = H;
-            display_menu[13:7]  = O;
-            display_menu[20:14] = L;
-            display_menu[27:21] = A;
-          end
-          5'd4: begin
-            display_menu[6:0]   = O;
-            display_menu[13:7]  = L;
-            display_menu[20:14] = A;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd5: begin
-            display_menu[6:0]   = L;
-            display_menu[13:7]  = A;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd6: begin
-            display_menu[6:0]   = A;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd7: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-        endcase
-      end
 
-      CH: begin
-        if (barrido >= 5'd14) barrido <= 5'd0;
-        case (barrido)
-          5'd0: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = C;
-          end
-          5'd1: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = C;
-            display_menu[27:21] = H;
-          end
-          5'd2: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = C;
-            display_menu[20:14] = H;
-            display_menu[27:21] = O;
-          end
-          5'd3: begin
-            display_menu[6:0]   = C;
-            display_menu[13:7]  = H;
-            display_menu[20:14] = O;
-            display_menu[27:21] = O;
-          end
-          5'd4: begin
-            display_menu[6:0]   = H;
-            display_menu[13:7]  = O;
-            display_menu[20:14] = O;
-            display_menu[27:21] = S;
-          end
-          5'd5: begin
-            display_menu[6:0]   = O;
-            display_menu[13:7]  = O;
-            display_menu[20:14] = S;
-            display_menu[27:21] = E;
-          end
-          5'd6: begin
-            display_menu[6:0]   = O;
-            display_menu[13:7]  = S;
-            display_menu[20:14] = E;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd7: begin
-            display_menu[6:0]   = S;
-            display_menu[13:7]  = E;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = H;
-          end
-          5'd8: begin
-            display_menu[6:0]   = E;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = H;
-            display_menu[27:21] = E;
-          end
-          5'd9: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = H;
-            display_menu[20:14] = E;
-            display_menu[27:21] = R;
-          end
-          5'd10: begin
-            display_menu[6:0]   = H;
-            display_menu[13:7]  = E;
-            display_menu[20:14] = R;
-            display_menu[27:21] = O;
-          end
-          5'd11: begin
-            display_menu[6:0]   = E;
-            display_menu[13:7]  = R;
-            display_menu[20:14] = O;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd12: begin
-            display_menu[6:0]   = R;
-            display_menu[13:7]  = O;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd13: begin
-            display_menu[6:0]   = O;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-          5'd14: begin
-            display_menu[6:0]   = 7'd0;
-            display_menu[13:7]  = 7'd0;
-            display_menu[20:14] = 7'd0;
-            display_menu[27:21] = 7'd0;
-          end
-        endcase
-      end
+    if (pasado != presente) begin  //para evitar bugs en el display
+      pasado <= presente;
+      display_menu <= 28'd0;
+      barrido <= 5'd0;
+    end else begin
+      display_menu[6:0]   <= display_menu[13:7];
+      display_menu[13:7]  <= display_menu[20:14];
+      display_menu[20:14] <= display_menu[27:21];
 
-      default: begin
-        //nada
-      end
-    endcase
+      case (presente)
+        WLCM: begin
+          if (barrido >= 5'd8) barrido <= 5'd0;
+          case (barrido)
+            5'd1: display_menu[27:21] <= H;
+            5'd2: display_menu[27:21] <= O;
+            5'd3: display_menu[27:21] <= L;
+            5'd4: display_menu[27:21] <= A;
+            default: display_menu[27:21] <= 7'd0;
+          endcase
+        end
+
+        CH: begin
+          if (barrido >= 5'd15) barrido <= 5'd0;
+          case (barrido)
+            5'd1: display_menu[27:21] <= C;
+            5'd2: display_menu[27:21] <= H;
+            5'd3: display_menu[27:21] <= O;
+            5'd4: display_menu[27:21] <= O;
+            5'd5: display_menu[27:21] <= S;
+            5'd6: display_menu[27:21] <= E;
+            5'd7: display_menu[27:21] <= 7'd0;
+            5'd8: display_menu[27:21] <= H;
+            5'd9: display_menu[27:21] <= E;
+            5'd10: display_menu[27:21] <= R;
+            5'd11: display_menu[27:21] <= O;
+            default: display_menu[27:21] <= 7'd0;
+          endcase
+        end
+
+        default: display_menu[27:21] <= 7'd0;
+      endcase
+    end
+
 
   end
 

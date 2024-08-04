@@ -1,129 +1,138 @@
 module gw_gao(
+    clk_obstaculos,
+    \W_or_L[1] ,
+    \W_or_L[0] ,
     \presente[2] ,
     \presente[1] ,
     \presente[0] ,
-    \tipo_obs[3] ,
-    \tipo_obs[2] ,
-    \tipo_obs[1] ,
-    \tipo_obs[0] ,
-    \tipo_obs1[3] ,
-    \tipo_obs1[2] ,
-    \tipo_obs1[1] ,
-    \tipo_obs1[0] ,
-    \generador_obstaculos/display_obs[20] ,
-    \generador_obstaculos/display_obs[19] ,
-    \generador_obstaculos/display_obs[18] ,
-    \generador_obstaculos/display_obs[17] ,
-    \generador_obstaculos/display_obs[16] ,
-    \generador_obstaculos/display_obs[15] ,
-    \generador_obstaculos/display_obs[14] ,
-    \generador_obstaculos/display_obs[13] ,
-    \generador_obstaculos/display_obs[12] ,
-    \generador_obstaculos/display_obs[11] ,
-    \generador_obstaculos/display_obs[10] ,
-    \generador_obstaculos/display_obs[9] ,
-    \generador_obstaculos/display_obs[8] ,
-    \generador_obstaculos/display_obs[7] ,
-    \generador_obstaculos/display_obs[6] ,
-    \generador_obstaculos/display_obs[5] ,
-    \generador_obstaculos/display_obs[4] ,
-    \generador_obstaculos/display_obs[3] ,
-    \generador_obstaculos/display_obs[2] ,
-    \generador_obstaculos/display_obs[1] ,
-    \generador_obstaculos/display_obs[0] ,
-    \generador_obstaculos/r_reg[3] ,
-    \generador_obstaculos/r_reg[2] ,
-    \generador_obstaculos/r_reg[1] ,
-    \generador_obstaculos/r_reg[0] ,
+    \heroe[6] ,
+    \heroe[5] ,
+    \heroe[4] ,
+    \heroe[3] ,
+    \heroe[2] ,
+    \heroe[1] ,
+    \heroe[0] ,
+    \display_obs[6] ,
+    \display_obs[5] ,
+    \display_obs[4] ,
+    \display_obs[3] ,
+    \display_obs[2] ,
+    \display_obs[1] ,
+    \display_obs[0] ,
+    \display_obs[13] ,
+    \display_obs[12] ,
+    \display_obs[11] ,
+    \display_obs[10] ,
+    \display_obs[9] ,
+    \display_obs[8] ,
+    \display_obs[7] ,
+    \display_obs[20] ,
+    \display_obs[19] ,
+    \display_obs[18] ,
+    \display_obs[17] ,
+    \display_obs[16] ,
+    \display_obs[15] ,
+    \display_obs[14] ,
+    \key[4] ,
+    \key[3] ,
+    \key[2] ,
+    \key[1] ,
+    \key[0] ,
     keypad_pressed,
-    \generador_obstaculos/clk_obstaculos ,
+    \fsm/clkDBG ,
     tms_pad_i,
     tck_pad_i,
     tdi_pad_i,
     tdo_pad_o
 );
 
+input clk_obstaculos;
+input \W_or_L[1] ;
+input \W_or_L[0] ;
 input \presente[2] ;
 input \presente[1] ;
 input \presente[0] ;
-input \tipo_obs[3] ;
-input \tipo_obs[2] ;
-input \tipo_obs[1] ;
-input \tipo_obs[0] ;
-input \tipo_obs1[3] ;
-input \tipo_obs1[2] ;
-input \tipo_obs1[1] ;
-input \tipo_obs1[0] ;
-input \generador_obstaculos/display_obs[20] ;
-input \generador_obstaculos/display_obs[19] ;
-input \generador_obstaculos/display_obs[18] ;
-input \generador_obstaculos/display_obs[17] ;
-input \generador_obstaculos/display_obs[16] ;
-input \generador_obstaculos/display_obs[15] ;
-input \generador_obstaculos/display_obs[14] ;
-input \generador_obstaculos/display_obs[13] ;
-input \generador_obstaculos/display_obs[12] ;
-input \generador_obstaculos/display_obs[11] ;
-input \generador_obstaculos/display_obs[10] ;
-input \generador_obstaculos/display_obs[9] ;
-input \generador_obstaculos/display_obs[8] ;
-input \generador_obstaculos/display_obs[7] ;
-input \generador_obstaculos/display_obs[6] ;
-input \generador_obstaculos/display_obs[5] ;
-input \generador_obstaculos/display_obs[4] ;
-input \generador_obstaculos/display_obs[3] ;
-input \generador_obstaculos/display_obs[2] ;
-input \generador_obstaculos/display_obs[1] ;
-input \generador_obstaculos/display_obs[0] ;
-input \generador_obstaculos/r_reg[3] ;
-input \generador_obstaculos/r_reg[2] ;
-input \generador_obstaculos/r_reg[1] ;
-input \generador_obstaculos/r_reg[0] ;
+input \heroe[6] ;
+input \heroe[5] ;
+input \heroe[4] ;
+input \heroe[3] ;
+input \heroe[2] ;
+input \heroe[1] ;
+input \heroe[0] ;
+input \display_obs[6] ;
+input \display_obs[5] ;
+input \display_obs[4] ;
+input \display_obs[3] ;
+input \display_obs[2] ;
+input \display_obs[1] ;
+input \display_obs[0] ;
+input \display_obs[13] ;
+input \display_obs[12] ;
+input \display_obs[11] ;
+input \display_obs[10] ;
+input \display_obs[9] ;
+input \display_obs[8] ;
+input \display_obs[7] ;
+input \display_obs[20] ;
+input \display_obs[19] ;
+input \display_obs[18] ;
+input \display_obs[17] ;
+input \display_obs[16] ;
+input \display_obs[15] ;
+input \display_obs[14] ;
+input \key[4] ;
+input \key[3] ;
+input \key[2] ;
+input \key[1] ;
+input \key[0] ;
 input keypad_pressed;
-input \generador_obstaculos/clk_obstaculos ;
+input \fsm/clkDBG ;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
+wire clk_obstaculos;
+wire \W_or_L[1] ;
+wire \W_or_L[0] ;
 wire \presente[2] ;
 wire \presente[1] ;
 wire \presente[0] ;
-wire \tipo_obs[3] ;
-wire \tipo_obs[2] ;
-wire \tipo_obs[1] ;
-wire \tipo_obs[0] ;
-wire \tipo_obs1[3] ;
-wire \tipo_obs1[2] ;
-wire \tipo_obs1[1] ;
-wire \tipo_obs1[0] ;
-wire \generador_obstaculos/display_obs[20] ;
-wire \generador_obstaculos/display_obs[19] ;
-wire \generador_obstaculos/display_obs[18] ;
-wire \generador_obstaculos/display_obs[17] ;
-wire \generador_obstaculos/display_obs[16] ;
-wire \generador_obstaculos/display_obs[15] ;
-wire \generador_obstaculos/display_obs[14] ;
-wire \generador_obstaculos/display_obs[13] ;
-wire \generador_obstaculos/display_obs[12] ;
-wire \generador_obstaculos/display_obs[11] ;
-wire \generador_obstaculos/display_obs[10] ;
-wire \generador_obstaculos/display_obs[9] ;
-wire \generador_obstaculos/display_obs[8] ;
-wire \generador_obstaculos/display_obs[7] ;
-wire \generador_obstaculos/display_obs[6] ;
-wire \generador_obstaculos/display_obs[5] ;
-wire \generador_obstaculos/display_obs[4] ;
-wire \generador_obstaculos/display_obs[3] ;
-wire \generador_obstaculos/display_obs[2] ;
-wire \generador_obstaculos/display_obs[1] ;
-wire \generador_obstaculos/display_obs[0] ;
-wire \generador_obstaculos/r_reg[3] ;
-wire \generador_obstaculos/r_reg[2] ;
-wire \generador_obstaculos/r_reg[1] ;
-wire \generador_obstaculos/r_reg[0] ;
+wire \heroe[6] ;
+wire \heroe[5] ;
+wire \heroe[4] ;
+wire \heroe[3] ;
+wire \heroe[2] ;
+wire \heroe[1] ;
+wire \heroe[0] ;
+wire \display_obs[6] ;
+wire \display_obs[5] ;
+wire \display_obs[4] ;
+wire \display_obs[3] ;
+wire \display_obs[2] ;
+wire \display_obs[1] ;
+wire \display_obs[0] ;
+wire \display_obs[13] ;
+wire \display_obs[12] ;
+wire \display_obs[11] ;
+wire \display_obs[10] ;
+wire \display_obs[9] ;
+wire \display_obs[8] ;
+wire \display_obs[7] ;
+wire \display_obs[20] ;
+wire \display_obs[19] ;
+wire \display_obs[18] ;
+wire \display_obs[17] ;
+wire \display_obs[16] ;
+wire \display_obs[15] ;
+wire \display_obs[14] ;
+wire \key[4] ;
+wire \key[3] ;
+wire \key[2] ;
+wire \key[1] ;
+wire \key[0] ;
 wire keypad_pressed;
-wire \generador_obstaculos/clk_obstaculos ;
+wire \fsm/clkDBG ;
 wire tms_pad_i;
 wire tck_pad_i;
 wire tdi_pad_i;
@@ -198,8 +207,8 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i(keypad_pressed),
-    .data_i({\presente[2] ,\presente[1] ,\presente[0] ,\tipo_obs[3] ,\tipo_obs[2] ,\tipo_obs[1] ,\tipo_obs[0] ,\tipo_obs1[3] ,\tipo_obs1[2] ,\tipo_obs1[1] ,\tipo_obs1[0] ,\generador_obstaculos/display_obs[20] ,\generador_obstaculos/display_obs[19] ,\generador_obstaculos/display_obs[18] ,\generador_obstaculos/display_obs[17] ,\generador_obstaculos/display_obs[16] ,\generador_obstaculos/display_obs[15] ,\generador_obstaculos/display_obs[14] ,\generador_obstaculos/display_obs[13] ,\generador_obstaculos/display_obs[12] ,\generador_obstaculos/display_obs[11] ,\generador_obstaculos/display_obs[10] ,\generador_obstaculos/display_obs[9] ,\generador_obstaculos/display_obs[8] ,\generador_obstaculos/display_obs[7] ,\generador_obstaculos/display_obs[6] ,\generador_obstaculos/display_obs[5] ,\generador_obstaculos/display_obs[4] ,\generador_obstaculos/display_obs[3] ,\generador_obstaculos/display_obs[2] ,\generador_obstaculos/display_obs[1] ,\generador_obstaculos/display_obs[0] ,\generador_obstaculos/r_reg[3] ,\generador_obstaculos/r_reg[2] ,\generador_obstaculos/r_reg[1] ,\generador_obstaculos/r_reg[0] }),
-    .clk_i(\generador_obstaculos/clk_obstaculos )
+    .data_i({clk_obstaculos,\W_or_L[1] ,\W_or_L[0] ,\presente[2] ,\presente[1] ,\presente[0] ,\heroe[6] ,\heroe[5] ,\heroe[4] ,\heroe[3] ,\heroe[2] ,\heroe[1] ,\heroe[0] ,\display_obs[6] ,\display_obs[5] ,\display_obs[4] ,\display_obs[3] ,\display_obs[2] ,\display_obs[1] ,\display_obs[0] ,\display_obs[13] ,\display_obs[12] ,\display_obs[11] ,\display_obs[10] ,\display_obs[9] ,\display_obs[8] ,\display_obs[7] ,\display_obs[20] ,\display_obs[19] ,\display_obs[18] ,\display_obs[17] ,\display_obs[16] ,\display_obs[15] ,\display_obs[14] ,\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] }),
+    .clk_i(\fsm/clkDBG )
 );
 
 endmodule

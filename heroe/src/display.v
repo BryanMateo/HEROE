@@ -26,77 +26,77 @@ module display (
   parameter WL = 3'd4;
   parameter PA = 3'd5;
 
-  always @(*) begin
+  always @(posedge clk) begin
     case (presente)
       OFF: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= 7'd0;
+        display5 <= 7'd0;
+        display6 <= 7'd0;
+        display7 <= 7'd0;
       end
       WLCM: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = display_menu[27:21];
-        display5 = display_menu[20:14];
-        display6 = display_menu[13:7];
-        display7 = display_menu[6:0];
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= display_menu[27:21];
+        display5 <= display_menu[20:14];
+        display6 <= display_menu[13:7];
+        display7 <= display_menu[6:0];
       end
       CH: begin
-        display0 = display_menu[27:21];
-        display1 = display_menu[20:14];
-        display2 = display_menu[13:7];
-        display3 = display_menu[6:0];
-        display4 = heroe;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display0 <= display_menu[27:21];
+        display1 <= display_menu[20:14];
+        display2 <= display_menu[13:7];
+        display3 <= display_menu[6:0];
+        display4 <= 7'd0;
+        display5 <= 7'd0;
+        display6 <= 7'd0;
+        display7 <= heroe;
       end
       GAME: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = display_obs[20:14];
-        display5 = display_obs[13:7];
-        display6 = display_obs[6:0];
-        display7 = heroe;
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= display_obs[20:14];
+        display5 <= display_obs[13:7];
+        display6 <= display_obs[6:0];
+        display7 <= heroe;
       end
       WL: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= display_obs[20:14];
+        display5 <= display_obs[13:7];
+        display6 <= display_obs[6:0];
+        display7 <= heroe;
       end
       PA: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= 7'd0;
+        display5 <= 7'd0;
+        display6 <= 7'd0;
+        display7 <= 7'd0;
       end
       default: begin
-        display0 = 7'd0;
-        display1 = 7'd0;
-        display2 = 7'd0;
-        display3 = 7'd0;
-        display4 = 7'd0;
-        display5 = 7'd0;
-        display6 = 7'd0;
-        display7 = 7'd0;
+        display0 <= 7'd0;
+        display1 <= 7'd0;
+        display2 <= 7'd0;
+        display3 <= 7'd0;
+        display4 <= 7'd0;
+        display5 <= 7'd0;
+        display6 <= 7'd0;
+        display7 <= 7'd0;
       end
     endcase
   end

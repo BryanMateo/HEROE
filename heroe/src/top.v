@@ -1,6 +1,5 @@
 module top (
     input clk,
-    input [1:0] W_or_L,
     input [3:0] columna,
     output [3:0] fila,
     output [6:0] displayout,
@@ -16,12 +15,13 @@ module top (
   wire [3:0] tipo_obs;
   wire [6:0] obstaculo;
 
-
-  // wire [1:0] W_or_L;
+  wire [1:0] W_or_L;
   wire [2:0] presente;
   wire [27:0] display_menu;
 
   wire [20:0] display_obs;
+
+  wire clk_obstaculos;
 
   fsm fsm (
       .clk(clk),
@@ -72,9 +72,10 @@ module top (
 
   generador_obstaculos generador_obstaculos (
       .clk(clk),
-      .tipo_obs(tipo_obs),
       .obstaculo(obstaculo),
       .presente(presente),
+      .clk_obstaculos(clk_obstaculos),
+      .tipo_obs(tipo_obs),
       .display_obs(display_obs)
   );
 
@@ -82,4 +83,13 @@ module top (
       .tipo_obs (tipo_obs),
       .obstaculo(obstaculo)
   );
+
+  colision colision (
+      .clk_obstaculos(clk_obstaculos),
+      .presente(presente),
+      .display_obs(display_obs),
+      .heroe(heroe),
+      .W_or_L(W_or_L)
+  );
+
 endmodule

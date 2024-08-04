@@ -65,11 +65,19 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 81,
+    "InstLine" : 82,
     "InstName" : "rom_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
     "ModuleLine" : 1,
     "ModuleName" : "rom_obstaculos"
+   },
+   {
+    "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
+    "InstLine" : 87,
+    "InstName" : "colision",
+    "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/colision.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "colision"
    }
   ]
  }

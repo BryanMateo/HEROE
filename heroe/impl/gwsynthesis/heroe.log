@@ -1,6 +1,7 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\CH.v'
+Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\colision.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\display.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\generador_obstaculos.v'
@@ -9,6 +10,21 @@ Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\m
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_heroe.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v'
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v'
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v'
+Analyzing included file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Back to file '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v'
+Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v'
 Compiling module 'top'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":1)
 Compiling module 'fsm'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\fsm.v":1)
 Compiling module 'keypad'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\keypad.v":1)
@@ -18,6 +34,16 @@ Compiling module 'rom_heroe'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe
 Compiling module 'choose_hero'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\CH.v":1)
 Compiling module 'generador_obstaculos'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\generador_obstaculos.v":8)
 Compiling module 'rom_obstaculos'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v":1)
+Compiling module 'colision'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\colision.v":1)
+Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
+Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_top.v":3042)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_mem_ctrl.v":1256)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v":74)
+Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
+Trying to combine GAO to RTL design
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
@@ -35,8 +61,7 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":62)
-WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":84)
+WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":85)
 [95%] Generate netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 [100%] Generate report file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe_syn.rpt.html" completed
 GowinSynthesis finish

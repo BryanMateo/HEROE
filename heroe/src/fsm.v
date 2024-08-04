@@ -72,14 +72,26 @@ module fsm (
     end
   end
   ////////////////////////////////////////////
-  always @(presente, W_or_L, TIMER_WL) begin
+  always @(presente, W_or_L, TIMER_WL, TIMER_WL1) begin
     futuro = presente;
 
     case (presente)
       GAME: begin
         case (W_or_L)
-          2'b01:   futuro = WL;
-          2'b10:   futuro = WL;
+          2'b01: begin
+            if (TIMER_WL1 == 4'd3) begin
+              futuro = WL;
+            end else begin
+              futuro = GAME;
+            end
+          end
+          2'b10: begin
+            if (TIMER_WL1 == 4'd3) begin
+              futuro = WL;
+            end else begin
+              futuro = GAME;
+            end
+          end
           default: futuro = GAME;
         endcase
       end
@@ -99,6 +111,7 @@ module fsm (
 
   reg clk_WL;
   reg [3:0] TIMER_WL = 4'd0;
+  reg [3:0] TIMER_WL1 = 4'd0;
 
   always @(posedge clk_WL) begin
     if (presente == WL) begin
@@ -110,6 +123,17 @@ module fsm (
     end else begin
       TIMER_WL <= 4'd0;
     end
+
+    if (presente == GAME) begin
+      if (W_or_L == 2'b01 || W_or_L == 2'b10) begin
+        TIMER_WL1 <= TIMER_WL1 + 4'd1;
+      end else begin
+        TIMER_WL1 <= 4'd0;
+      end
+    end else begin
+      TIMER_WL1 <= 4'd0;
+    end
+
   end
 
   reg [27:0] counter_WL = 28'd0;
@@ -122,4 +146,17 @@ module fsm (
     end
     clk_WL <= (counter_WL < DIVISOR_WL / 2) ? 1'b1 : 1'b0;
   end
+
+
+  reg clkDBG;
+  reg [27:0] counterDBG = 28'd0;
+  parameter DIVISORDBG = 28'd26367;
+  always @(posedge clk) begin
+    counterDBG <= counterDBG + 28'd1;
+    if (counterDBG >= (DIVISORDBG - 1)) begin
+      counterDBG <= 28'd0;
+    end
+    clkDBG <= (counterDBG < DIVISORDBG / 2) ? 1'b1 : 1'b0;
+  end
+
 endmodule

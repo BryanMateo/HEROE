@@ -18,11 +18,12 @@ module generador_obstaculos #(
     input clk,
     input [6:0] obstaculo,
     input [2:0] presente,
+    output reg clk_obstaculos,
     output reg [3:0] tipo_obs = 4'd0,
     output reg [20:0] display_obs = 21'd0
 );
 
-  reg clk_obstaculos;
+
   reg [27:0] counter = 28'd0;
   localparam DIVISOR = 28'd13500000;
   always @(posedge clk) begin
@@ -67,6 +68,8 @@ module generador_obstaculos #(
         display_obs[6:0]  <= display_obs[13:7];
         display_obs[13:7] <= display_obs[20:14];
       end
+    end else if (presente == WL) begin
+      //nada para que retenga la posicion de los obstaculos
     end else begin
       condicion   <= 1'b0;
       obs_counter <= 2'd0;
