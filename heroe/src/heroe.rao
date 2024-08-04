@@ -57,6 +57,10 @@
                 <Signal>key[1]</Signal>
                 <Signal>key[0]</Signal>
             </Bus>
+            <Bus capture_enable="true" name="generador_obstaculos/mundo[1:0]">
+                <Signal>generador_obstaculos/mundo[1]</Signal>
+                <Signal>generador_obstaculos/mundo[0]</Signal>
+            </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -102,5 +106,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1011011011110101</GAO_ID>
+    <GAO_ID>1101110010110010</GAO_ID>
 </GAO_CONFIG>

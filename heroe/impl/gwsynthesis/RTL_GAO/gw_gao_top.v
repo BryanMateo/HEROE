@@ -38,6 +38,8 @@ module gw_gao(
     \key[2] ,
     \key[1] ,
     \key[0] ,
+    \generador_obstaculos/mundo[1] ,
+    \generador_obstaculos/mundo[0] ,
     keypad_pressed,
     \fsm/clkDBG ,
     tms_pad_i,
@@ -85,6 +87,8 @@ input \key[3] ;
 input \key[2] ;
 input \key[1] ;
 input \key[0] ;
+input \generador_obstaculos/mundo[1] ;
+input \generador_obstaculos/mundo[0] ;
 input keypad_pressed;
 input \fsm/clkDBG ;
 input tms_pad_i;
@@ -131,6 +135,8 @@ wire \key[3] ;
 wire \key[2] ;
 wire \key[1] ;
 wire \key[0] ;
+wire \generador_obstaculos/mundo[1] ;
+wire \generador_obstaculos/mundo[0] ;
 wire keypad_pressed;
 wire \fsm/clkDBG ;
 wire tms_pad_i;
@@ -207,7 +213,7 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i(keypad_pressed),
-    .data_i({clk_obstaculos,\W_or_L[1] ,\W_or_L[0] ,\presente[2] ,\presente[1] ,\presente[0] ,\heroe[6] ,\heroe[5] ,\heroe[4] ,\heroe[3] ,\heroe[2] ,\heroe[1] ,\heroe[0] ,\display_obs[6] ,\display_obs[5] ,\display_obs[4] ,\display_obs[3] ,\display_obs[2] ,\display_obs[1] ,\display_obs[0] ,\display_obs[13] ,\display_obs[12] ,\display_obs[11] ,\display_obs[10] ,\display_obs[9] ,\display_obs[8] ,\display_obs[7] ,\display_obs[20] ,\display_obs[19] ,\display_obs[18] ,\display_obs[17] ,\display_obs[16] ,\display_obs[15] ,\display_obs[14] ,\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] }),
+    .data_i({clk_obstaculos,\W_or_L[1] ,\W_or_L[0] ,\presente[2] ,\presente[1] ,\presente[0] ,\heroe[6] ,\heroe[5] ,\heroe[4] ,\heroe[3] ,\heroe[2] ,\heroe[1] ,\heroe[0] ,\display_obs[6] ,\display_obs[5] ,\display_obs[4] ,\display_obs[3] ,\display_obs[2] ,\display_obs[1] ,\display_obs[0] ,\display_obs[13] ,\display_obs[12] ,\display_obs[11] ,\display_obs[10] ,\display_obs[9] ,\display_obs[8] ,\display_obs[7] ,\display_obs[20] ,\display_obs[19] ,\display_obs[18] ,\display_obs[17] ,\display_obs[16] ,\display_obs[15] ,\display_obs[14] ,\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] ,\generador_obstaculos/mundo[1] ,\generador_obstaculos/mundo[0] }),
     .clk_i(\fsm/clkDBG )
 );
 

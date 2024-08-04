@@ -13,7 +13,9 @@ module generador_obstaculos #(
     parameter CH = 3'd2,
     parameter GAME = 3'd3,
     parameter WL = 3'd4,
-    parameter PA = 3'd5
+    parameter PA = 3'd5,
+
+    parameter nMundo = 5
 ) (
     input clk,
     input [6:0] obstaculo,
@@ -24,13 +26,45 @@ module generador_obstaculos #(
     output reg [20:0] display_obs = 21'd0
 );
 
-
   reg [27:0] counter = 28'd0;
-  localparam DIVISOR = 28'd13500000;
+  reg [29:0] DIVISOR;
   always @(posedge clk) begin
     counter <= counter + 28'd1;
     if (counter >= (DIVISOR - 1)) counter <= 28'd0;
     clk_obstaculos <= (counter < DIVISOR / 2) ? 1'b1 : 1'b0;
+  end
+
+  localparam DIVISOR1hz = 28'd27000000;
+  reg [27:0] counter1hz = 28'd0;
+  reg clk_1hz;
+  always @(posedge clk) begin
+    counter1hz <= counter1hz + 28'd1;
+    if (counter1hz >= (DIVISOR1hz - 1)) counter1hz <= 28'd0;
+    clk_1hz <= (counter1hz < DIVISOR1hz / 2) ? 1'b1 : 1'b0;
+  end
+
+  reg [6:0] tiempo_mundo = nMundo;
+  reg [1:0] mundo;
+  always @(posedge clk_1hz) begin
+    if (presente == GAME) begin
+      if (tiempo_mundo == 7'd0) begin
+        mundo <= mundo + 2'd1;
+        tiempo_mundo <= nMundo;
+      end else begin
+        tiempo_mundo <= tiempo_mundo - 7'd1;
+      end
+    end else begin
+      mundo <= 2'd0;
+      tiempo_mundo <= nMundo;
+    end
+  end
+
+  always @(*) begin
+    case (mundo)
+      2'd1: DIVISOR = 28'd13500000;  //2
+      2'd2: DIVISOR = 28'd10800000;  //2.5
+      default: DIVISOR = 28'd18000000;  //1.5
+    endcase
   end
 
   reg [N:0] r_reg = 4'd1;
@@ -79,6 +113,7 @@ module generador_obstaculos #(
       else world_counter <= world_counter + 1'd1;
     end
   end
+
   assign feedback_value = r_reg[3] ^ r_reg[2] ^ r_reg[0];
   assign r_next = {feedback_value, r_reg[N:1]};
 

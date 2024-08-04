@@ -3,8 +3,8 @@ module colision #(
     parameter OFF  = 3'd0,
     parameter WLCM = 3'd1,
     parameter CH   = 3'd2,
-    parameter GAME = 3'd3,
-    parameter WL   = 3'd4,
+    parameter GAME = 3'd6,
+    parameter WL   = 3'd6,
     parameter PA   = 3'd5
 ) (
     input clk_obstaculos,
