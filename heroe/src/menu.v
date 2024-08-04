@@ -50,7 +50,12 @@ module menu (
 
   reg [4:0] barrido;
   always @(posedge clk_menu) begin
-    barrido <= barrido + 1'd1;
+    if (presente != OFF) begin
+      barrido <= barrido + 1'd1;
+    end else begin
+      barrido <= 5'd0;
+    end
+  
     case (presente)
       OFF: begin
         barrido <= 5'd0;
