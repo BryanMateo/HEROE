@@ -26,7 +26,7 @@ module top (
 
   wire clk_obstaculos;
 
-  wire [27:0] display_puntaje;
+  wire [20:0] display_puntaje;
 
   fsm fsm (
       .clk(clk),
@@ -50,6 +50,7 @@ module top (
       .display_menu(display_menu),
       .heroe(heroe),
       .display_obs(display_obs),
+      .display_puntaje(display_puntaje),
       .displayout(displayout),
       .selector(selector)
   );
@@ -107,7 +108,6 @@ module top (
       .clk(clk),
       .bono_tomado(bono_tomado),
       .W_or_L(W_or_L),
-      .mundo(mundo),
       .presente(presente),
       .display_puntaje(display_puntaje)
   );

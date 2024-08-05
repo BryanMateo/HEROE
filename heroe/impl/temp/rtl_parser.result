@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 57,
+    "InstLine" : 58,
     "InstName" : "menu",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/menu.v",
     "ModuleLine" : 1,
@@ -41,7 +41,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 64,
+    "InstLine" : 65,
     "InstName" : "rom_heroe",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
     "ModuleLine" : 1,
@@ -49,7 +49,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 70,
+    "InstLine" : 71,
     "InstName" : "choose_hero",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/CH.v",
     "ModuleLine" : 1,
@@ -57,7 +57,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 79,
+    "InstLine" : 80,
     "InstName" : "generador_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/generador_obstaculos.v",
     "ModuleLine" : 1,
@@ -65,7 +65,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 91,
+    "InstLine" : 92,
     "InstName" : "rom_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
     "ModuleLine" : 1,
@@ -73,7 +73,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 96,
+    "InstLine" : 97,
     "InstName" : "colision",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/colision.v",
     "ModuleLine" : 1,
@@ -81,7 +81,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 106,
+    "InstLine" : 107,
     "InstName" : "puntaje",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/puntaje.v",
     "ModuleLine" : 1,

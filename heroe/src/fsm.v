@@ -148,7 +148,7 @@ module fsm (
 
   reg clkDBG;
   reg [27:0] counterDBG = 28'd0;
-  parameter DIVISORDBG = 28'd26367;
+  parameter DIVISORDBG = 28'd60000;
   always @(posedge clk) begin
     counterDBG <= counterDBG + 28'd1;
     if (counterDBG >= (DIVISORDBG - 1)) begin

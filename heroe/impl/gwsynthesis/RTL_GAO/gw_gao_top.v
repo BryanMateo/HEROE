@@ -1,5 +1,21 @@
 module gw_gao(
-    \puntaje/puntos[8] ,
+    \puntaje/puntos_bin[8] ,
+    \puntaje/puntos_bin[7] ,
+    \puntaje/puntos_bin[6] ,
+    \puntaje/puntos_bin[5] ,
+    \puntaje/puntos_bin[4] ,
+    \puntaje/puntos_bin[3] ,
+    \puntaje/puntos_bin[2] ,
+    \puntaje/puntos_bin[1] ,
+    \puntaje/puntos_bin[0] ,
+    \puntaje/puntos_bono[7] ,
+    \puntaje/puntos_bono[6] ,
+    \puntaje/puntos_bono[5] ,
+    \puntaje/puntos_bono[4] ,
+    \puntaje/puntos_bono[3] ,
+    \puntaje/puntos_bono[2] ,
+    \puntaje/puntos_bono[1] ,
+    \puntaje/puntos_bono[0] ,
     \puntaje/puntos[7] ,
     \puntaje/puntos[6] ,
     \puntaje/puntos[5] ,
@@ -11,14 +27,30 @@ module gw_gao(
     \presente[2] ,
     \presente[1] ,
     \presente[0] ,
-    \puntaje/clk_puntaje ,
+    \fsm/clkDBG ,
     tms_pad_i,
     tck_pad_i,
     tdi_pad_i,
     tdo_pad_o
 );
 
-input \puntaje/puntos[8] ;
+input \puntaje/puntos_bin[8] ;
+input \puntaje/puntos_bin[7] ;
+input \puntaje/puntos_bin[6] ;
+input \puntaje/puntos_bin[5] ;
+input \puntaje/puntos_bin[4] ;
+input \puntaje/puntos_bin[3] ;
+input \puntaje/puntos_bin[2] ;
+input \puntaje/puntos_bin[1] ;
+input \puntaje/puntos_bin[0] ;
+input \puntaje/puntos_bono[7] ;
+input \puntaje/puntos_bono[6] ;
+input \puntaje/puntos_bono[5] ;
+input \puntaje/puntos_bono[4] ;
+input \puntaje/puntos_bono[3] ;
+input \puntaje/puntos_bono[2] ;
+input \puntaje/puntos_bono[1] ;
+input \puntaje/puntos_bono[0] ;
 input \puntaje/puntos[7] ;
 input \puntaje/puntos[6] ;
 input \puntaje/puntos[5] ;
@@ -30,13 +62,29 @@ input \puntaje/puntos[0] ;
 input \presente[2] ;
 input \presente[1] ;
 input \presente[0] ;
-input \puntaje/clk_puntaje ;
+input \fsm/clkDBG ;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire \puntaje/puntos[8] ;
+wire \puntaje/puntos_bin[8] ;
+wire \puntaje/puntos_bin[7] ;
+wire \puntaje/puntos_bin[6] ;
+wire \puntaje/puntos_bin[5] ;
+wire \puntaje/puntos_bin[4] ;
+wire \puntaje/puntos_bin[3] ;
+wire \puntaje/puntos_bin[2] ;
+wire \puntaje/puntos_bin[1] ;
+wire \puntaje/puntos_bin[0] ;
+wire \puntaje/puntos_bono[7] ;
+wire \puntaje/puntos_bono[6] ;
+wire \puntaje/puntos_bono[5] ;
+wire \puntaje/puntos_bono[4] ;
+wire \puntaje/puntos_bono[3] ;
+wire \puntaje/puntos_bono[2] ;
+wire \puntaje/puntos_bono[1] ;
+wire \puntaje/puntos_bono[0] ;
 wire \puntaje/puntos[7] ;
 wire \puntaje/puntos[6] ;
 wire \puntaje/puntos[5] ;
@@ -48,7 +96,7 @@ wire \puntaje/puntos[0] ;
 wire \presente[2] ;
 wire \presente[1] ;
 wire \presente[0] ;
-wire \puntaje/clk_puntaje ;
+wire \fsm/clkDBG ;
 wire tms_pad_i;
 wire tck_pad_i;
 wire tdi_pad_i;
@@ -123,8 +171,8 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i({\presente[2] ,\presente[1] ,\presente[0] }),
-    .data_i({\puntaje/puntos[8] ,\puntaje/puntos[7] ,\puntaje/puntos[6] ,\puntaje/puntos[5] ,\puntaje/puntos[4] ,\puntaje/puntos[3] ,\puntaje/puntos[2] ,\puntaje/puntos[1] ,\puntaje/puntos[0] }),
-    .clk_i(\puntaje/clk_puntaje )
+    .data_i({\puntaje/puntos_bin[8] ,\puntaje/puntos_bin[7] ,\puntaje/puntos_bin[6] ,\puntaje/puntos_bin[5] ,\puntaje/puntos_bin[4] ,\puntaje/puntos_bin[3] ,\puntaje/puntos_bin[2] ,\puntaje/puntos_bin[1] ,\puntaje/puntos_bin[0] ,\puntaje/puntos_bono[7] ,\puntaje/puntos_bono[6] ,\puntaje/puntos_bono[5] ,\puntaje/puntos_bono[4] ,\puntaje/puntos_bono[3] ,\puntaje/puntos_bono[2] ,\puntaje/puntos_bono[1] ,\puntaje/puntos_bono[0] ,\puntaje/puntos[7] ,\puntaje/puntos[6] ,\puntaje/puntos[5] ,\puntaje/puntos[4] ,\puntaje/puntos[3] ,\puntaje/puntos[2] ,\puntaje/puntos[1] ,\puntaje/puntos[0] }),
+    .clk_i(\fsm/clkDBG )
 );
 
 endmodule

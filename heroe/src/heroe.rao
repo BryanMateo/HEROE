@@ -2,10 +2,30 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="puntaje/clk_puntaje" trig_type="0" storage_depth="32" window_num="1" capture_amount="32" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="fsm/clkDBG" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
-            <Bus capture_enable="true" name="puntaje/puntos[8:0]">
-                <Signal>puntaje/puntos[8]</Signal>
+            <Bus capture_enable="true" name="puntaje/puntos_bin[8:0]">
+                <Signal>puntaje/puntos_bin[8]</Signal>
+                <Signal>puntaje/puntos_bin[7]</Signal>
+                <Signal>puntaje/puntos_bin[6]</Signal>
+                <Signal>puntaje/puntos_bin[5]</Signal>
+                <Signal>puntaje/puntos_bin[4]</Signal>
+                <Signal>puntaje/puntos_bin[3]</Signal>
+                <Signal>puntaje/puntos_bin[2]</Signal>
+                <Signal>puntaje/puntos_bin[1]</Signal>
+                <Signal>puntaje/puntos_bin[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="puntaje/puntos_bono[7:0]">
+                <Signal>puntaje/puntos_bono[7]</Signal>
+                <Signal>puntaje/puntos_bono[6]</Signal>
+                <Signal>puntaje/puntos_bono[5]</Signal>
+                <Signal>puntaje/puntos_bono[4]</Signal>
+                <Signal>puntaje/puntos_bono[3]</Signal>
+                <Signal>puntaje/puntos_bono[2]</Signal>
+                <Signal>puntaje/puntos_bono[1]</Signal>
+                <Signal>puntaje/puntos_bono[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="puntaje/puntos[7:0]">
                 <Signal>puntaje/puntos[7]</Signal>
                 <Signal>puntaje/puntos[6]</Signal>
                 <Signal>puntaje/puntos[5]</Signal>
@@ -64,5 +84,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1101111101100001</GAO_ID>
+    <GAO_ID>1110011100001111</GAO_ID>
 </GAO_CONFIG>

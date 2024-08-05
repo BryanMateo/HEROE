@@ -4,6 +4,7 @@ module display (
     input [27:0] display_menu,
     input [6:0] heroe,
     input [20:0] display_obs,
+    input [20:0] display_puntaje,
     output reg [6:0] displayout,
     output reg [7:0] selector
 
@@ -67,19 +68,19 @@ module display (
         // display5 <= display_obs[13:7];
         // display6 <= display_obs[6:0];
         // display7 <= heroe;
-        display0 <= display_obs[20:14];
-        display1 <= display_obs[13:7];
-        display2 <= display_obs[6:0];
-        display3 <= heroe;
+        display0 <= 7'd0;
+        display1 <= display_puntaje[20:14];
+        display2 <= display_puntaje[13:7];
+        display3 <= display_puntaje[6:0];
         display4 <= display_obs[20:14];
         display5 <= display_obs[13:7];
         display6 <= display_obs[6:0];
         display7 <= heroe;
       end
       WL: begin
-        display0 <= 7'd0;
-        display1 <= 7'd0;
-        display2 <= 7'd0;
+        display0 <= display_puntaje[20:14];
+        display1 <= display_puntaje[13:7];
+        display2 <= display_puntaje[6:0];
         display3 <= 7'd0;
         display4 <= display_menu[27:21];
         display5 <= display_menu[20:14];
@@ -91,10 +92,10 @@ module display (
         display1 <= 7'd0;
         display2 <= 7'd0;
         display3 <= 7'd0;
-        display4 <= 7'd0;
-        display5 <= 7'd0;
-        display6 <= 7'd0;
-        display7 <= 7'd0;
+        display4 <= display_menu[27:21];
+        display5 <= display_menu[20:14];
+        display6 <= display_menu[13:7];
+        display7 <= display_menu[6:0];
       end
       default: begin
         display0 <= 7'd0;

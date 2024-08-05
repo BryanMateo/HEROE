@@ -42,14 +42,28 @@ module generador_obstaculos #(
   wire [N:0] r_next;
   wire feedback_value;
   reg condicion = 1'b0;
+  reg condicion_bono = 1'b0;
 
   reg [1:0] obs_counter = 2'd0;
   reg [3:0] world_counter = 4'd1;
 
   reg [6:0] conteo_obs = mundo1;
 
-  always @(posedge bono_tomado) begin
-    mundo = mundo + 2'd1;
+  // always @(posedge bono_tomado) begin
+  //   mundo = mundo + 2'd1;
+  // end
+
+  always @(posedge clk) begin
+    if (presente == GAME || presente == WL) begin
+      if (bono_tomado) begin
+        if (!condicion_bono) begin
+          mundo <= mundo + 2'd1;
+          condicion_bono <= 1'b1;
+        end
+      end else condicion_bono <= 1'b0;
+    end else begin
+      mundo <= 2'd0;
+    end
   end
 
   always @(posedge clk_obstaculos) begin
@@ -112,7 +126,7 @@ module generador_obstaculos #(
       //nada para que retenga la posicion de los obstaculos
     end
 
-    if (presente != GAME) begin
+    if (presente != GAME &&| presente != WL) begin
       condicion   <= 1'b0;
       obs_counter <= 2'd0;
       display_obs <= 21'd0;

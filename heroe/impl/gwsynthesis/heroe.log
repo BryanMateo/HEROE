@@ -37,6 +37,8 @@ Compiling module 'generador_obstaculos'("C:\Users\Bryan\Desktop\Gowin-Proyectos\
 Compiling module 'rom_obstaculos'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v":1)
 Compiling module 'colision'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\colision.v":1)
 Compiling module 'puntaje'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":1)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":102)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":103)
 Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
@@ -47,34 +49,6 @@ Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":374)
 Trying to combine GAO to RTL design
 NOTE  (EX0101) : Current top module is "top"
-WARN  (EX0211) : The output port "display_puntaje[27]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[26]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[25]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[24]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[23]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[22]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[21]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[20]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[19]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[18]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[17]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[16]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[15]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[14]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[13]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[12]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[11]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[10]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[9]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[8]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[7]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[6]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[5]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[4]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[3]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[2]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[1]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
-WARN  (EX0211) : The output port "display_puntaje[0]" of module "puntaje" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":15)
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
@@ -91,8 +65,8 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":68)
-WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":94)
+WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":69)
+WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":95)
 [95%] Generate netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 [100%] Generate report file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe_syn.rpt.html" completed
 GowinSynthesis finish
