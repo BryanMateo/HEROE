@@ -1,32 +1,23 @@
 module gw_gao(
-    \puntaje/puntos_bin[8] ,
-    \puntaje/puntos_bin[7] ,
-    \puntaje/puntos_bin[6] ,
-    \puntaje/puntos_bin[5] ,
-    \puntaje/puntos_bin[4] ,
-    \puntaje/puntos_bin[3] ,
-    \puntaje/puntos_bin[2] ,
-    \puntaje/puntos_bin[1] ,
-    \puntaje/puntos_bin[0] ,
-    \puntaje/puntos_bono[7] ,
-    \puntaje/puntos_bono[6] ,
-    \puntaje/puntos_bono[5] ,
-    \puntaje/puntos_bono[4] ,
-    \puntaje/puntos_bono[3] ,
-    \puntaje/puntos_bono[2] ,
-    \puntaje/puntos_bono[1] ,
-    \puntaje/puntos_bono[0] ,
-    \puntaje/puntos[7] ,
-    \puntaje/puntos[6] ,
-    \puntaje/puntos[5] ,
-    \puntaje/puntos[4] ,
-    \puntaje/puntos[3] ,
-    \puntaje/puntos[2] ,
-    \puntaje/puntos[1] ,
-    \puntaje/puntos[0] ,
-    \presente[2] ,
-    \presente[1] ,
-    \presente[0] ,
+    \progreso[4] ,
+    \progreso[3] ,
+    \progreso[2] ,
+    \progreso[1] ,
+    \progreso[0] ,
+    \generador_obstaculos/conteo_obs[6] ,
+    \generador_obstaculos/conteo_obs[5] ,
+    \generador_obstaculos/conteo_obs[4] ,
+    \generador_obstaculos/conteo_obs[3] ,
+    \generador_obstaculos/conteo_obs[2] ,
+    \generador_obstaculos/conteo_obs[1] ,
+    \generador_obstaculos/conteo_obs[0] ,
+    \mundo[1] ,
+    \mundo[0] ,
+    \key[4] ,
+    \key[3] ,
+    \key[2] ,
+    \key[1] ,
+    \key[0] ,
     \fsm/clkDBG ,
     tms_pad_i,
     tck_pad_i,
@@ -34,68 +25,50 @@ module gw_gao(
     tdo_pad_o
 );
 
-input \puntaje/puntos_bin[8] ;
-input \puntaje/puntos_bin[7] ;
-input \puntaje/puntos_bin[6] ;
-input \puntaje/puntos_bin[5] ;
-input \puntaje/puntos_bin[4] ;
-input \puntaje/puntos_bin[3] ;
-input \puntaje/puntos_bin[2] ;
-input \puntaje/puntos_bin[1] ;
-input \puntaje/puntos_bin[0] ;
-input \puntaje/puntos_bono[7] ;
-input \puntaje/puntos_bono[6] ;
-input \puntaje/puntos_bono[5] ;
-input \puntaje/puntos_bono[4] ;
-input \puntaje/puntos_bono[3] ;
-input \puntaje/puntos_bono[2] ;
-input \puntaje/puntos_bono[1] ;
-input \puntaje/puntos_bono[0] ;
-input \puntaje/puntos[7] ;
-input \puntaje/puntos[6] ;
-input \puntaje/puntos[5] ;
-input \puntaje/puntos[4] ;
-input \puntaje/puntos[3] ;
-input \puntaje/puntos[2] ;
-input \puntaje/puntos[1] ;
-input \puntaje/puntos[0] ;
-input \presente[2] ;
-input \presente[1] ;
-input \presente[0] ;
+input \progreso[4] ;
+input \progreso[3] ;
+input \progreso[2] ;
+input \progreso[1] ;
+input \progreso[0] ;
+input \generador_obstaculos/conteo_obs[6] ;
+input \generador_obstaculos/conteo_obs[5] ;
+input \generador_obstaculos/conteo_obs[4] ;
+input \generador_obstaculos/conteo_obs[3] ;
+input \generador_obstaculos/conteo_obs[2] ;
+input \generador_obstaculos/conteo_obs[1] ;
+input \generador_obstaculos/conteo_obs[0] ;
+input \mundo[1] ;
+input \mundo[0] ;
+input \key[4] ;
+input \key[3] ;
+input \key[2] ;
+input \key[1] ;
+input \key[0] ;
 input \fsm/clkDBG ;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire \puntaje/puntos_bin[8] ;
-wire \puntaje/puntos_bin[7] ;
-wire \puntaje/puntos_bin[6] ;
-wire \puntaje/puntos_bin[5] ;
-wire \puntaje/puntos_bin[4] ;
-wire \puntaje/puntos_bin[3] ;
-wire \puntaje/puntos_bin[2] ;
-wire \puntaje/puntos_bin[1] ;
-wire \puntaje/puntos_bin[0] ;
-wire \puntaje/puntos_bono[7] ;
-wire \puntaje/puntos_bono[6] ;
-wire \puntaje/puntos_bono[5] ;
-wire \puntaje/puntos_bono[4] ;
-wire \puntaje/puntos_bono[3] ;
-wire \puntaje/puntos_bono[2] ;
-wire \puntaje/puntos_bono[1] ;
-wire \puntaje/puntos_bono[0] ;
-wire \puntaje/puntos[7] ;
-wire \puntaje/puntos[6] ;
-wire \puntaje/puntos[5] ;
-wire \puntaje/puntos[4] ;
-wire \puntaje/puntos[3] ;
-wire \puntaje/puntos[2] ;
-wire \puntaje/puntos[1] ;
-wire \puntaje/puntos[0] ;
-wire \presente[2] ;
-wire \presente[1] ;
-wire \presente[0] ;
+wire \progreso[4] ;
+wire \progreso[3] ;
+wire \progreso[2] ;
+wire \progreso[1] ;
+wire \progreso[0] ;
+wire \generador_obstaculos/conteo_obs[6] ;
+wire \generador_obstaculos/conteo_obs[5] ;
+wire \generador_obstaculos/conteo_obs[4] ;
+wire \generador_obstaculos/conteo_obs[3] ;
+wire \generador_obstaculos/conteo_obs[2] ;
+wire \generador_obstaculos/conteo_obs[1] ;
+wire \generador_obstaculos/conteo_obs[0] ;
+wire \mundo[1] ;
+wire \mundo[0] ;
+wire \key[4] ;
+wire \key[3] ;
+wire \key[2] ;
+wire \key[1] ;
+wire \key[0] ;
 wire \fsm/clkDBG ;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -170,8 +143,8 @@ gw_con_top  u_icon_top(
 
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
-    .trig0_i({\presente[2] ,\presente[1] ,\presente[0] }),
-    .data_i({\puntaje/puntos_bin[8] ,\puntaje/puntos_bin[7] ,\puntaje/puntos_bin[6] ,\puntaje/puntos_bin[5] ,\puntaje/puntos_bin[4] ,\puntaje/puntos_bin[3] ,\puntaje/puntos_bin[2] ,\puntaje/puntos_bin[1] ,\puntaje/puntos_bin[0] ,\puntaje/puntos_bono[7] ,\puntaje/puntos_bono[6] ,\puntaje/puntos_bono[5] ,\puntaje/puntos_bono[4] ,\puntaje/puntos_bono[3] ,\puntaje/puntos_bono[2] ,\puntaje/puntos_bono[1] ,\puntaje/puntos_bono[0] ,\puntaje/puntos[7] ,\puntaje/puntos[6] ,\puntaje/puntos[5] ,\puntaje/puntos[4] ,\puntaje/puntos[3] ,\puntaje/puntos[2] ,\puntaje/puntos[1] ,\puntaje/puntos[0] }),
+    .trig0_i({\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] }),
+    .data_i({\progreso[4] ,\progreso[3] ,\progreso[2] ,\progreso[1] ,\progreso[0] ,\generador_obstaculos/conteo_obs[6] ,\generador_obstaculos/conteo_obs[5] ,\generador_obstaculos/conteo_obs[4] ,\generador_obstaculos/conteo_obs[3] ,\generador_obstaculos/conteo_obs[2] ,\generador_obstaculos/conteo_obs[1] ,\generador_obstaculos/conteo_obs[0] ,\mundo[1] ,\mundo[0] }),
     .clk_i(\fsm/clkDBG )
 );
 

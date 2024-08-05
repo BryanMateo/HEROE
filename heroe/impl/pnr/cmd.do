@@ -3,7 +3,7 @@
 -pn GW2A-LV18PG256C8/I7
 -cst C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\heroe.cst
 -cfg C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\pnr\device.cfg
--gao_crc 1110011100001111
+-gao_crc 0110011111010011
 -bit
 -tr
 -ph

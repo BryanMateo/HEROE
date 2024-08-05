@@ -130,7 +130,7 @@ module menu (
 
         PA: begin
 
-          if (barrido >= 5'd14) barrido <= 5'd0;
+          if (barrido >= 5'd21) barrido <= 5'd0;
           case (barrido)
             5'd1: display_menu[27:21] <= P;
             5'd2: display_menu[27:21] <= L;
@@ -142,6 +142,13 @@ module menu (
             5'd8: display_menu[27:21] <= A;
             5'd9: display_menu[27:21] <= I;
             5'd10: display_menu[27:21] <= N;
+            5'd11: display_menu[27:21] <= 7'd0;
+            5'd12: display_menu[27:21] <= Y;
+            5'd13: display_menu[27:21] <= 7'd0;
+            5'd14: display_menu[27:21] <= O;
+            5'd15: display_menu[27:21] <= R;
+            5'd16: display_menu[27:21] <= 7'd0;
+            5'd17: display_menu[27:21] <= N;
             default: display_menu[27:21] <= 7'd0;
           endcase
 

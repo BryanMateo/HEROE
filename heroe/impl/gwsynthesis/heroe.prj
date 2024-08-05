@@ -14,6 +14,7 @@
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_heroe.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v" type="verilog"/>
+        <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\sonido.v" type="verilog"/>
         <File path="C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v" type="verilog"/>
         <File path="C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v" type="gao"/>
         <File path="C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v" type="gao"/>

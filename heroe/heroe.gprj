@@ -15,8 +15,9 @@
         <File path="src/puntaje.v" type="file.verilog" enable="1"/>
         <File path="src/rom_heroe.v" type="file.verilog" enable="1"/>
         <File path="src/rom_obstaculos.v" type="file.verilog" enable="1"/>
+        <File path="src/sonido.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/heroe.cst" type="file.cst" enable="1"/>
-        <File path="src/heroe.rao" type="file.gao" enable="0"/>
+        <File path="src/heroe.rao" type="file.gao" enable="1"/>
     </FileList>
 </Project>

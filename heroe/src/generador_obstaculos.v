@@ -8,9 +8,9 @@ module generador_obstaculos #(
     parameter WL = 3'd4,
     parameter PA = 3'd5,
 
-    parameter mundo1 = 15,
-    parameter mundo2 = 20,
-    parameter mundo3 = 25
+    parameter mundo1 = 30,
+    parameter mundo2 = 40,
+    parameter mundo3 = 50
 ) (
     input clk,
     input [6:0] obstaculo,
@@ -20,7 +20,8 @@ module generador_obstaculos #(
     output reg clk_obstaculos,
     output reg [1:0] mundo = 2'd0,
     output reg [4:0] tipo_obs = 4'd0,
-    output reg [20:0] display_obs = 21'd0
+    output reg [20:0] display_obs = 21'd0,
+    output reg [4:0] progreso
 );
 
   always @(*) begin
@@ -103,6 +104,7 @@ module generador_obstaculos #(
             end
           endcase
         end
+        
         if (conteo_obs == 7'd2) begin
           tipo_obs <= 7'd16;
           display_obs[20:14] <= 7'd0;
@@ -119,6 +121,7 @@ module generador_obstaculos #(
         end
       end
     end
+
     if (W_or_L == 2'b00) begin
       display_obs[6:0]  <= display_obs[13:7];
       display_obs[13:7] <= display_obs[20:14];
@@ -126,7 +129,7 @@ module generador_obstaculos #(
       //nada para que retenga la posicion de los obstaculos
     end
 
-    if (presente != GAME &&| presente != WL) begin
+    if (presente != GAME && |presente != WL) begin
       condicion   <= 1'b0;
       obs_counter <= 2'd0;
       display_obs <= 21'd0;
@@ -139,6 +142,40 @@ module generador_obstaculos #(
 
   assign feedback_value = r_reg[3] ^ r_reg[2] ^ r_reg[0];
   assign r_next = {feedback_value, r_reg[N:1]};
+
+
+  always @(*) begin
+    case (mundo)
+      2'd0: begin
+        if (conteo_obs < ((20 * mundo1) / 100)) progreso = ~5'b11111;
+        else if (conteo_obs < ((35 * mundo1) / 100)) progreso = ~5'b01111;
+        else if (conteo_obs < ((55 * mundo1) / 100)) progreso = ~5'b00111;
+        else if (conteo_obs < ((80 * mundo1) / 100)) progreso = ~5'b00011;
+        else if (conteo_obs < ((95 * mundo1) / 100)) progreso = ~5'b00001;
+        else progreso = ~5'b00000;
+      end
+
+      2'd1: begin
+        if (conteo_obs < ((15 * mundo2) / 100)) progreso = ~5'b11111;
+        else if (conteo_obs < ((25 * mundo2) / 100)) progreso = ~5'b01111;
+        else if (conteo_obs < ((40 * mundo2) / 100)) progreso = ~5'b00111;
+        else if (conteo_obs < ((60 * mundo2) / 100)) progreso = ~5'b00011;
+        else if (conteo_obs < ((85 * mundo2) / 100)) progreso = ~5'b00001;
+        else progreso = ~5'b00000;
+      end
+
+      2'd2: begin
+        if (conteo_obs < ((5 * mundo3) / 100)) progreso = ~5'b11111;
+        else if (conteo_obs < ((20 * mundo3) / 100)) progreso = ~5'b01111;
+        else if (conteo_obs < ((35 * mundo3) / 100)) progreso = ~5'b00111;
+        else if (conteo_obs < ((50 * mundo3) / 100)) progreso = ~5'b00011;
+        else if (conteo_obs < ((80 * mundo3) / 100)) progreso = ~5'b00001;
+        else progreso = ~5'b00000;
+      end
+
+      default: progreso = ~5'b00000;
+    endcase
+  end
 
 endmodule
 

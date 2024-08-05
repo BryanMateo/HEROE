@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="773(0)" T_Alu="216(0)" T_Lut="1070(0)" T_Bsram="13(0)">
-    <SubModule name="gw_gao_inst_0" Register="361" Alu="16" Lut="452" Bsram="13" T_Register="361(361)" T_Alu="16(16)" T_Lut="452(452)" T_Bsram="13(13)"/>
-    <SubModule name="fsm" Register="70" Alu="54" Lut="65" T_Register="70(70)" T_Alu="54(54)" T_Lut="65(65)"/>
-    <SubModule name="keypad" Register="43" Alu="27" Lut="46" T_Register="43(43)" T_Alu="27(27)" T_Lut="46(46)"/>
-    <SubModule name="display" Register="103" Alu="27" Lut="241" T_Register="103(103)" T_Alu="27(27)" T_Lut="241(241)"/>
-    <SubModule name="menu" Register="65" Alu="30" Lut="76" T_Register="65(65)" T_Alu="30(30)" T_Lut="76(76)"/>
-    <SubModule name="choose_hero" Register="6" Lut="19" T_Register="6(6)" T_Lut="19(19)"/>
-    <SubModule name="generador_obstaculos" Register="75" Alu="27" Lut="113" T_Register="75(75)" T_Alu="27(27)" T_Lut="113(113)"/>
+<Module name="top" T_Register="782(0)" T_Alu="292(0)" T_Lut="1031(0)" T_Bsram="1(0)">
+    <SubModule name="gw_gao_inst_0" Register="296" Alu="11" Lut="396" Bsram="1" T_Register="296(296)" T_Alu="11(11)" T_Lut="396(396)" T_Bsram="1(1)"/>
+    <SubModule name="fsm" Register="70" Alu="54" Lut="75" T_Register="70(70)" T_Alu="54(54)" T_Lut="75(75)"/>
+    <SubModule name="keypad" Register="43" Alu="27" Lut="48" T_Register="43(43)" T_Alu="27(27)" T_Lut="48(48)"/>
+    <SubModule name="display" Register="103" Alu="27" Lut="199" T_Register="103(103)" T_Alu="27(27)" T_Lut="199(199)"/>
+    <SubModule name="menu" Register="65" Alu="30" Lut="81" T_Register="65(65)" T_Alu="30(30)" T_Lut="81(81)"/>
+    <SubModule name="choose_hero" Register="6" Lut="20" T_Register="6(6)" T_Lut="20(20)"/>
+    <SubModule name="generador_obstaculos" Register="75" Alu="27" Lut="122" T_Register="75(75)" T_Alu="27(27)" T_Lut="122(122)"/>
     <SubModule name="colision" Register="2" Lut="5" T_Register="2(2)" T_Lut="5(5)"/>
-    <SubModule name="puntaje" Register="48" Alu="35" Lut="53" T_Register="48(48)" T_Alu="35(35)" T_Lut="53(53)"/>
+    <SubModule name="puntaje" Register="48" Alu="35" Lut="54" T_Register="48(48)" T_Alu="35(35)" T_Lut="54(54)"/>
+    <SubModule name="sonido" Register="74" Alu="81" Lut="31" T_Register="74(74)" T_Alu="81(81)" T_Lut="31(31)"/>
 </Module>

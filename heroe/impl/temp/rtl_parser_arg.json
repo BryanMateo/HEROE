@@ -42,6 +42,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/sonido.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
    "Type" : "verilog"
   }

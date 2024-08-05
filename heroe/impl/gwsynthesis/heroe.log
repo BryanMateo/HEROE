@@ -10,6 +10,7 @@ Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\m
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_heroe.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\rom_obstaculos.v'
+Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\sonido.v'
 Analyzing Verilog file 'C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v'
 Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v'
 Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v'
@@ -39,6 +40,7 @@ Compiling module 'colision'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\
 Compiling module 'puntaje'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":1)
 WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":102)
 WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\puntaje.v":103)
+Compiling module 'sonido'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\sonido.v":1)
 Compiling module 'gw_gao'("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9.02_x64\IDE\data\ipcores\GAO\GW_CON\gw_con_top.v":377)
@@ -65,8 +67,8 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":69)
-WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":95)
+WARN  (NL0002) : The module "rom_heroe" instantiated to "rom_heroe" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":71)
+WARN  (NL0002) : The module "rom_obstaculos" instantiated to "rom_obstaculos" is swept in optimizing("C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\src\top.v":98)
 [95%] Generate netlist file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe.vg" completed
 [100%] Generate report file "C:\Users\Bryan\Desktop\Gowin-Proyectos\HEROE\heroe\impl\gwsynthesis\heroe_syn.rpt.html" completed
 GowinSynthesis finish

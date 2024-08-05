@@ -12,25 +12,25 @@
   <Part Number>: GW2A-LV18PG256C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Mon Aug  5 13:58:11 2024
+  <Created Time>:Mon Aug  5 17:57:07 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.252s, Elapsed time = 0h 0m 0.252s
-    Placement Phase 1: CPU time = 0h 0m 0.488s, Elapsed time = 0h 0m 0.488s
-    Placement Phase 2: CPU time = 0h 0m 0.431s, Elapsed time = 0h 0m 0.431s
+    Placement Phase 0: CPU time = 0h 0m 0.234s, Elapsed time = 0h 0m 0.234s
+    Placement Phase 1: CPU time = 0h 0m 0.487s, Elapsed time = 0h 0m 0.487s
+    Placement Phase 2: CPU time = 0h 0m 0.444s, Elapsed time = 0h 0m 0.444s
     Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Total Placement: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-    Routing Phase 1: CPU time = 0h 0m 0.265s, Elapsed time = 0h 0m 0.265s
+    Routing Phase 1: CPU time = 0h 0m 0.249s, Elapsed time = 0h 0m 0.249s
     Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
  Generate output files:
-    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
 
  Total Time and Memory Usage: CPU time = 0h 0m 10s, Elapsed time = 0h 0m 10s, Peak memory usage = 443MB
 
@@ -40,23 +40,23 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 1294/20736  7%
-    --LUT,ALU,ROM16           | 1294(1063 LUT, 231 ALU, 0 ROM16)
+  Logic                       | 1335/20736  7%
+    --LUT,ALU,ROM16           | 1335(1023 LUT, 312 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 773/16173  5%
+  Register                    | 782/16173  5%
     --Logic Register as Latch | 0/15552  0%
-    --Logic Register as FF    | 758/15552  5%
+    --Logic Register as FF    | 767/15552  5%
     --I/O Register as Latch   | 0/621  0%
     --I/O Register as FF      | 15/621  3%
-  CLS                         | 871/10368  9%
-  I/O Port                    | 28
-  I/O Buf                     | 28
+  CLS                         | 882/10368  9%
+  I/O Port                    | 34
+  I/O Buf                     | 34
     --Input Buf               | 8
-    --Output Buf              | 20
+    --Output Buf              | 26
     --Inout Buf               | 0
   IOLOGIC                     | 0%
-  BSRAM                       | 29%
-    --SDPB                    | 13
+  BSRAM                       | 3%
+    --SDPB                    | 1
   DSP                         | 0%
   PLL                         | 0/4  0%
   DCS                         | 0/8  0%
@@ -76,9 +76,9 @@
   I/O Bank  | Usage       
   -----------------------
   bank 0   | 2/29(6%)    
-  bank 1   | 4/20(20%)   
+  bank 1   | 8/20(40%)   
   bank 2   | 8/20(40%)   
-  bank 3   | 9/32(28%)   
+  bank 3   | 11/32(34%)  
   bank 4   | 0/36(0%)    
   bank 5   | 0/36(0%)    
   bank 6   | 0/18(0%)    
@@ -92,7 +92,7 @@
   Global Clock  | Usage       
   -------------------------------
   PRIMARY       | 8/8(100%)
-  LW            | 3/8(38%)
+  LW            | 4/8(50%)
   GCLK_PIN      | 2/8(25%)
   PLL           | 0/4(0%)
   CLKDIV        | 0/8(0%)
@@ -106,16 +106,17 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  fsm_0_2        | PRIMARY        |  TR TL BL
-  clk_obstaculos_Z| PRIMARY        |  TR BR BL
+  fsm_0_2        | PRIMARY        |  TL BL
+  clk_obstaculos_Z| PRIMARY        |  TR
   gw_gao_inst_0/control0[0]| PRIMARY        |  TR TL BL
   keypad/clk_key | PRIMARY        |  BR
   display/clk_barrido| PRIMARY        |  TR TL BR
-  menu/clk_menu  | PRIMARY        |  TR
-  puntaje/clk_puntaje| PRIMARY        |  TL
+  menu/clk_menu  | PRIMARY        |  TR TL
+  sonido/clk_1000hz| PRIMARY        |  BR
   presente_Z[2]  | LW             |  -
   gw_gao_inst_0/gao_jtag_reset| LW             |  -
   fsm/clk_WL     | LW             |  -
+  puntaje/clk_puntaje| LW             |  -
   ===========================================
 
 
@@ -151,6 +152,12 @@ selector[4]    |           | E15/1         | Y          | out   | IOT44[B] | LVC
 selector[5]    |           | A15/7         | Y          | out   | IOL2[B]  | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 selector[6]    |           | N9/3          | Y          | out   | IOR36[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 selector[7]    |           | C12/7         | Y          | out   | IOL7[A]  | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
+buzzer         |           | N7/3          | Y          | out   | IOR47[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
+progreso[0]    |           | A13/3         | Y          | out   | IOR32[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
+progreso[1]    |           | N16/1         | Y          | out   | IOT52[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
+progreso[2]    |           | N14/1         | Y          | out   | IOT52[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
+progreso[3]    |           | L14/1         | Y          | out   | IOT34[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
+progreso[4]    |           | L16/1         | Y          | out   | IOT34[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
 tdo_pad_o      |           | C6/2          | N          | out   | IOR25[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 ======================================================================================================================================================================================================================
 
@@ -195,8 +202,8 @@ K14/1    | -              | in    | IOT30[A] | LVCMOS18 | NA    | UP        | ON
 K15/1    | -              | in    | IOT30[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 J11/1    | -              | in    | IOT32[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 L12/1    | -              | in    | IOT32[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-L16/1    | -              | in    | IOT34[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-L14/1    | -              | in    | IOT34[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
+L16/1    | progreso[4]    | out   | IOT34[A] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8  
+L14/1    | progreso[3]    | out   | IOT34[B] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8  
 K13/1    | -              | in    | IOT36[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 K12/1    | -              | in    | IOT36[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 K11/1    | -              | in    | IOT38[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
@@ -207,8 +214,8 @@ D14/1    | selector[0]    | out   | IOT44[A] | LVCMOS18 | 8     | UP        | NA
 E15/1    | selector[4]    | out   | IOT44[B] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8  
 N15/1    | -              | in    | IOT48[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 P16/1    | -              | in    | IOT48[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-N16/1    | -              | in    | IOT52[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-N14/1    | -              | in    | IOT52[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
+N16/1    | progreso[1]    | out   | IOT52[A] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8  
+N14/1    | progreso[2]    | out   | IOT52[B] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8  
 P15/1    | -              | in    | IOT54[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 R16/1    | -              | in    | IOT54[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -346,7 +353,7 @@ M16/3    | -              | in    | IOR30[A] | LVCMOS18 | NA    | UP        | ON
 B16/3    | -              | in    | IOR30[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 C15/3    | -              | in    | IOR31[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 B10/3    | -              | in    | IOR31[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-A13/3    | -              | in    | IOR32[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
+A13/3    | progreso[0]    | out   | IOR32[A] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8  
 C13/3    | -              | in    | IOR32[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 P10/3    | -              | in    | IOR33[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 R10/3    | -              | in    | IOR33[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
@@ -366,7 +373,7 @@ T8/3     | fila[2]        | out   | IOR42[B] | LVCMOS18 | 8     | UP        | NA
 M6/3     | -              | in    | IOR44[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 L8/3     | -              | in    | IOR44[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 M7/3     | -              | in    | IOR47[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-N7/3     | -              | in    | IOR47[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
+N7/3     | buzzer         | out   | IOR47[B] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8  
 R7/3     | -              | in    | IOR49[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 P7/3     | -              | in    | IOR49[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 N6/3     | -              | in    | IOR51[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  

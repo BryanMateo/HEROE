@@ -3,7 +3,9 @@ module top (
     input [3:0] columna,
     output [3:0] fila,
     output [6:0] displayout,
-    output wire [7:0] selector
+    output wire [7:0] selector,
+    output buzzer,
+    output [4:0] progreso
 );
   wire [4:0] key;
   wire keypad_pressed;
@@ -86,7 +88,8 @@ module top (
       .clk_obstaculos(clk_obstaculos),
       .mundo(mundo),
       .tipo_obs(tipo_obs),
-      .display_obs(display_obs)
+      .display_obs(display_obs),
+      .progreso(progreso)
   );
 
   rom_obstaculos rom_obstaculos (
@@ -110,6 +113,14 @@ module top (
       .W_or_L(W_or_L),
       .presente(presente),
       .display_puntaje(display_puntaje)
+  );
+
+  sonido sonido (
+      .clk(clk),
+      .keypad_pressed(keypad_pressed),
+      .presente(presente),
+      .W_or_L(W_or_L),
+      .buzzer(buzzer)
   );
 
 endmodule
