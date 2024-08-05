@@ -11,6 +11,7 @@ module gw_gao(
     \generador_obstaculos/conteo_obs[2] ,
     \generador_obstaculos/conteo_obs[1] ,
     \generador_obstaculos/conteo_obs[0] ,
+    \generador_obstaculos/condicion ,
     \mundo[1] ,
     \mundo[0] ,
     \key[4] ,
@@ -37,6 +38,7 @@ input \generador_obstaculos/conteo_obs[3] ;
 input \generador_obstaculos/conteo_obs[2] ;
 input \generador_obstaculos/conteo_obs[1] ;
 input \generador_obstaculos/conteo_obs[0] ;
+input \generador_obstaculos/condicion ;
 input \mundo[1] ;
 input \mundo[0] ;
 input \key[4] ;
@@ -62,6 +64,7 @@ wire \generador_obstaculos/conteo_obs[3] ;
 wire \generador_obstaculos/conteo_obs[2] ;
 wire \generador_obstaculos/conteo_obs[1] ;
 wire \generador_obstaculos/conteo_obs[0] ;
+wire \generador_obstaculos/condicion ;
 wire \mundo[1] ;
 wire \mundo[0] ;
 wire \key[4] ;
@@ -144,7 +147,7 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i({\key[4] ,\key[3] ,\key[2] ,\key[1] ,\key[0] }),
-    .data_i({\progreso[4] ,\progreso[3] ,\progreso[2] ,\progreso[1] ,\progreso[0] ,\generador_obstaculos/conteo_obs[6] ,\generador_obstaculos/conteo_obs[5] ,\generador_obstaculos/conteo_obs[4] ,\generador_obstaculos/conteo_obs[3] ,\generador_obstaculos/conteo_obs[2] ,\generador_obstaculos/conteo_obs[1] ,\generador_obstaculos/conteo_obs[0] ,\mundo[1] ,\mundo[0] }),
+    .data_i({\progreso[4] ,\progreso[3] ,\progreso[2] ,\progreso[1] ,\progreso[0] ,\generador_obstaculos/conteo_obs[6] ,\generador_obstaculos/conteo_obs[5] ,\generador_obstaculos/conteo_obs[4] ,\generador_obstaculos/conteo_obs[3] ,\generador_obstaculos/conteo_obs[2] ,\generador_obstaculos/conteo_obs[1] ,\generador_obstaculos/conteo_obs[0] ,\generador_obstaculos/condicion ,\mundo[1] ,\mundo[0] }),
     .clk_i(\fsm/clkDBG )
 );
 

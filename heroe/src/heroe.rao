@@ -20,6 +20,7 @@
                 <Signal>generador_obstaculos/conteo_obs[1]</Signal>
                 <Signal>generador_obstaculos/conteo_obs[0]</Signal>
             </Bus>
+            <Signal capture_enable="true">generador_obstaculos/condicion</Signal>
             <Bus capture_enable="true" name="mundo[1:0]">
                 <Signal>mundo[1]</Signal>
                 <Signal>mundo[0]</Signal>
@@ -75,5 +76,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0110011111010011</GAO_ID>
+    <GAO_ID>0100101101010101</GAO_ID>
 </GAO_CONFIG>

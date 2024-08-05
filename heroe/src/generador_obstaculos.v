@@ -48,11 +48,14 @@ module generador_obstaculos #(
   reg [1:0] obs_counter = 2'd0;
   reg [3:0] world_counter = 4'd1;
 
-  reg [6:0] conteo_obs = mundo1;
+  reg [6:0] conteo_obs;
+  reg [6:0] valor_obs;
 
   // always @(posedge bono_tomado) begin
   //   mundo = mundo + 2'd1;
   // end
+
+
 
   always @(posedge clk) begin
     if (presente == GAME || presente == WL) begin
@@ -65,20 +68,30 @@ module generador_obstaculos #(
     end else begin
       mundo <= 2'd0;
     end
+
+    case (mundo)
+      2'd1: valor_obs <= mundo2;
+      2'd2: valor_obs <= mundo3;
+      default: valor_obs <= mundo1;
+    endcase
   end
+
+  reg [2:0] mundoant;
 
   always @(posedge clk_obstaculos) begin
     if (presente == GAME && W_or_L == 2'b00) begin
       if (!condicion) begin
-        case (mundo)
-          2'd1: begin
-            conteo_obs <= mundo2;
-          end
-          2'd2: begin
-            conteo_obs <= mundo3;
-          end
-          default: conteo_obs <= mundo1;
-        endcase
+        // case (mundo)
+        //   2'd1: begin
+        //     conteo_obs <= mundo2;
+        //   end
+        //   2'd2: begin
+        //     conteo_obs <= mundo3;
+        //   end
+        //   default: conteo_obs <= mundo1;
+        // endcase
+        mundoant <= mundo;
+        conteo_obs <= valor_obs;
         r_reg <= world_counter;
         condicion <= 1'b1;
       end else if (mundo != 2'd3) begin
@@ -104,7 +117,7 @@ module generador_obstaculos #(
             end
           endcase
         end
-        
+
         if (conteo_obs == 7'd2) begin
           tipo_obs <= 7'd16;
           display_obs[20:14] <= 7'd0;
@@ -115,7 +128,9 @@ module generador_obstaculos #(
           else display_obs[20:14] <= obstaculo;
         end else if (conteo_obs == 7'd0) begin
           if (mundo != 2'd3) begin
-            condicion <= 1'b0;
+            if (mundoant != mundo) begin
+              condicion <= 1'b0;
+            end
           end
           display_obs[20:14] <= 7'd0;
         end
