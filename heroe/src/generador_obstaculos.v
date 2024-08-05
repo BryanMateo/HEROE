@@ -38,10 +38,6 @@ module generador_obstaculos #(
     clk_obstaculos <= (counter < DIVISOR / 2) ? 1'b1 : 1'b0;
   end
 
-  //reg [1:0] mundo;
-  reg [1:0] mundo_ant;
-  reg bono = 1'b0;
-
   reg [N:0] r_reg = 4'd1;
   wire [N:0] r_next;
   wire feedback_value;

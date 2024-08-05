@@ -30,6 +30,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/puntaje.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
    "Type" : "verilog"
   },

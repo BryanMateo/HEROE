@@ -2,88 +2,28 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="fsm/clkDBG" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="puntaje/clk_puntaje" trig_type="0" storage_depth="32" window_num="1" capture_amount="32" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
-            <Signal capture_enable="true">clk_obstaculos</Signal>
-            <Bus capture_enable="true" name="display_obs[6:0]">
-                <Signal>display_obs[6]</Signal>
-                <Signal>display_obs[5]</Signal>
-                <Signal>display_obs[4]</Signal>
-                <Signal>display_obs[3]</Signal>
-                <Signal>display_obs[2]</Signal>
-                <Signal>display_obs[1]</Signal>
-                <Signal>display_obs[0]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="display_obs[13:7]">
-                <Signal>display_obs[13]</Signal>
-                <Signal>display_obs[12]</Signal>
-                <Signal>display_obs[11]</Signal>
-                <Signal>display_obs[10]</Signal>
-                <Signal>display_obs[9]</Signal>
-                <Signal>display_obs[8]</Signal>
-                <Signal>display_obs[7]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="display_obs[20:14]">
-                <Signal>display_obs[20]</Signal>
-                <Signal>display_obs[19]</Signal>
-                <Signal>display_obs[18]</Signal>
-                <Signal>display_obs[17]</Signal>
-                <Signal>display_obs[16]</Signal>
-                <Signal>display_obs[15]</Signal>
-                <Signal>display_obs[14]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="generador_obstaculos/mundo[1:0]">
-                <Signal>generador_obstaculos/mundo[1]</Signal>
-                <Signal>generador_obstaculos/mundo[0]</Signal>
-            </Bus>
-            <Bus capture_enable="true" name="generador_obstaculos/obs_counter[1:0]">
-                <Signal>generador_obstaculos/obs_counter[1]</Signal>
-                <Signal>generador_obstaculos/obs_counter[0]</Signal>
-            </Bus>
-            <Signal capture_enable="true">generador_obstaculos/bono_tomado</Signal>
-            <Bus capture_enable="true" name="generador_obstaculos/DIVISOR[29:0]">
-                <Signal>generador_obstaculos/DIVISOR[29]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[28]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[27]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[26]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[25]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[24]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[23]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[22]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[21]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[20]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[19]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[18]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[17]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[16]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[15]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[14]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[13]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[12]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[11]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[10]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[9]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[8]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[7]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[6]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[5]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[4]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[3]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[2]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[1]</Signal>
-                <Signal>generador_obstaculos/DIVISOR[0]</Signal>
+            <Bus capture_enable="true" name="puntaje/puntos[8:0]">
+                <Signal>puntaje/puntos[8]</Signal>
+                <Signal>puntaje/puntos[7]</Signal>
+                <Signal>puntaje/puntos[6]</Signal>
+                <Signal>puntaje/puntos[5]</Signal>
+                <Signal>puntaje/puntos[4]</Signal>
+                <Signal>puntaje/puntos[3]</Signal>
+                <Signal>puntaje/puntos[2]</Signal>
+                <Signal>puntaje/puntos[1]</Signal>
+                <Signal>puntaje/puntos[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
                 <SignalList>
-                    <Signal>display/display_obs[6]</Signal>
-                    <Signal>display/display_obs[5]</Signal>
-                    <Signal>display/display_obs[4]</Signal>
-                    <Signal>display/display_obs[3]</Signal>
-                    <Signal>display/display_obs[2]</Signal>
-                    <Signal>display/display_obs[1]</Signal>
-                    <Signal>display/display_obs[0]</Signal>
+                    <Bus restorename="presente[2:0]">
+                        <Signal>presente[2]</Signal>
+                        <Signal>presente[1]</Signal>
+                        <Signal>presente[0]</Signal>
+                    </Bus>
                 </SignalList>
             </Trigger>
             <Trigger index="1"/>
@@ -103,7 +43,7 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1111111" value1="0000000" trigger="0"/>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="011" value1="000" trigger="0"/>
             <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -124,5 +64,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1000010001110010</GAO_ID>
+    <GAO_ID>1101111101100001</GAO_ID>
 </GAO_CONFIG>

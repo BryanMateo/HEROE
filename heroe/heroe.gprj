@@ -12,6 +12,7 @@
         <File path="src/generador_obstaculos.v" type="file.verilog" enable="1"/>
         <File path="src/keypad.v" type="file.verilog" enable="1"/>
         <File path="src/menu.v" type="file.verilog" enable="1"/>
+        <File path="src/puntaje.v" type="file.verilog" enable="1"/>
         <File path="src/rom_heroe.v" type="file.verilog" enable="1"/>
         <File path="src/rom_obstaculos.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
