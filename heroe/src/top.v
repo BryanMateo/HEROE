@@ -21,6 +21,9 @@ module top (
 
   wire [20:0] display_obs;
 
+  wire [1:0] mundo;
+  wire bono_tomado;
+
   wire clk_obstaculos;
 
   fsm fsm (
@@ -75,8 +78,10 @@ module top (
       .clk(clk),
       .obstaculo(obstaculo),
       .presente(presente),
+      .bono_tomado(bono_tomado),
       .W_or_L(W_or_L),
       .clk_obstaculos(clk_obstaculos),
+      .mundo(mundo),
       .tipo_obs(tipo_obs),
       .display_obs(display_obs)
   );
@@ -88,10 +93,12 @@ module top (
 
   colision colision (
       .clk_obstaculos(clk_obstaculos),
+      .mundo(mundo),
       .presente(presente),
       .display_obs(display_obs),
       .heroe(heroe),
-      .W_or_L(W_or_L)
+      .W_or_L(W_or_L),
+      .bono_tomado(bono_tomado)
   );
 
 endmodule
