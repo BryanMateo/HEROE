@@ -110,16 +110,16 @@ module sonido #(
   end
 
   reg [2:0] nota_1;
-  reg [5:0] sel;
+  reg [5:0] sel, sel1;
   always @(posedge bpm) begin
 
-    if (presente == GAME) begin
-      if (sel == 6'd37) begin
-        sel <= 6'd0;
+    if (W_or_L == 2'b10) begin
+      if (sel1 == 6'd37) begin
+        sel1 <= 6'd0;
       end else begin
-        sel <= sel + 1'b1;
+        sel1 <= sel1 + 1'b1;
       end
-      case (sel)
+      case (sel1)
         6'd0:  nota_1 <= FA;
         6'd1:  nota_1 <= 3'd0;
         6'd2:  nota_1 <= FA;
@@ -161,8 +161,62 @@ module sonido #(
           nota_1 <= 3'd0;
         end
       endcase
+    end else if (W_or_L == 2'b01) begin
+      sel <= 6'd0;
+      sel1 <= 6'd0;
+      nota_1 <= 3'd0;
+    end else if (presente == GAME) begin
+      if (sel == 6'd40) begin
+        sel <= 6'd0;
+      end else begin
+        sel <= sel + 1'b1;
+      end
+      case (sel)
+        6'd0: nota_1 <= DO;
+        6'd1: nota_1 <= FA;
+        6'd2: nota_1 <= SOL;
+        6'd3: nota_1 <= DO;
+        6'd4: nota_1 <= FA;
+        6'd5: nota_1 <= SOL;
+        6'd6: nota_1 <= DO;
+        6'd7: nota_1 <= 3'd0;
+        6'd8: nota_1 <= SOL;
+        6'd9: nota_1 <= FA;
+        6'd10: nota_1 <= RE;
+        6'd11: nota_1 <= DO;
+        6'd12: nota_1 <= SOL;
+        6'd13: nota_1 <= SIB;
+        6'd14: nota_1 <= FA;
+        6'd15: nota_1 <= DO;
+        6'd16: nota_1 <= 3'd0;
+        6'd17: nota_1 <= SIB;
+        6'd18: nota_1 <= SOL;
+        6'd19: nota_1 <= FA;
+        6'd20: nota_1 <= DO;
+        6'd21: nota_1 <= RE;
+        6'd22: nota_1 <= FA;
+        6'd23: nota_1 <= SOL;
+        6'd24: nota_1 <= DO;
+        6'd25: nota_1 <= 3'd0;
+        6'd26: nota_1 <= DO;
+        6'd27: nota_1 <= FA;
+        6'd28: nota_1 <= SOL;
+        6'd29: nota_1 <= FA;
+        6'd30: nota_1 <= RE;
+        6'd31: nota_1 <= FA;
+        6'd32: nota_1 <= SOL;
+        6'd33: nota_1 <= DO;
+        6'd34: nota_1 <= 3'd0;
+        6'd35: nota_1 <= FA;
+        6'd36: nota_1 <= DO;
+        6'd37: nota_1 <= SOL;
+        6'd38: nota_1 <= FA;
+        6'd39: nota_1 <= RE;
+        default: nota_1 <= 3'd0;
+      endcase
     end else begin
       sel <= 6'd0;
+      sel1 <= 6'd0;
       nota_1 <= 3'd0;
     end
   end

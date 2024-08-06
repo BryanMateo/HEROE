@@ -12,27 +12,27 @@
   <Part Number>: GW2A-LV18PG256C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Mon Aug  5 19:56:02 2024
+  <Created Time>:Mon Aug  5 20:57:37 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.256s, Elapsed time = 0h 0m 0.256s
-    Placement Phase 1: CPU time = 0h 0m 0.466s, Elapsed time = 0h 0m 0.465s
-    Placement Phase 2: CPU time = 0h 0m 0.409s, Elapsed time = 0h 0m 0.409s
+    Placement Phase 0: CPU time = 0h 0m 0.254s, Elapsed time = 0h 0m 0.254s
+    Placement Phase 1: CPU time = 0h 0m 0.506s, Elapsed time = 0h 0m 0.506s
+    Placement Phase 2: CPU time = 0h 0m 0.416s, Elapsed time = 0h 0m 0.416s
     Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Total Placement: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-    Routing Phase 1: CPU time = 0h 0m 0.266s, Elapsed time = 0h 0m 0.266s
-    Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    Routing Phase 0: CPU time = 0h 0m 0.002s, Elapsed time = 0h 0m 0.001s
+    Routing Phase 1: CPU time = 0h 0m 0.271s, Elapsed time = 0h 0m 0.272s
+    Routing Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    Total Routing: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Generate output files:
-    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
 
- Total Time and Memory Usage: CPU time = 0h 0m 10s, Elapsed time = 0h 0m 10s, Peak memory usage = 443MB
+ Total Time and Memory Usage: CPU time = 0h 0m 11s, Elapsed time = 0h 0m 11s, Peak memory usage = 443MB
 
 
 3. Resource Usage Summary
@@ -40,15 +40,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 1467/20736  8%
-    --LUT,ALU,ROM16           | 1467(1081 LUT, 386 ALU, 0 ROM16)
+  Logic                       | 1489/20736  8%
+    --LUT,ALU,ROM16           | 1489(1103 LUT, 386 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 860/16173  6%
+  Register                    | 866/16173  6%
     --Logic Register as Latch | 0/15552  0%
-    --Logic Register as FF    | 845/15552  6%
+    --Logic Register as FF    | 851/15552  6%
     --I/O Register as Latch   | 0/621  0%
     --I/O Register as FF      | 15/621  3%
-  CLS                         | 961/10368  10%
+  CLS                         | 963/10368  10%
   I/O Port                    | 35
   I/O Buf                     | 35
     --Input Buf               | 8
@@ -106,18 +106,18 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  fsm_0_2        | PRIMARY        |  TR TL
-  clk_obstaculos_Z| PRIMARY        |  TR TL
+  fsm_0_2        | PRIMARY        |  TR TL BR BL
+  clk_obstaculos_Z| PRIMARY        |  TL
   gw_gao_inst_0/control0[0]| PRIMARY        |  TR BR
   keypad/clk_key | PRIMARY        |  BR
-  display/clk_barrido| PRIMARY        |  TR TL BR
-  menu/clk_menu  | PRIMARY        |  BL
-  sonido/clk_1000hz| PRIMARY        |  BR
+  display/clk_barrido| PRIMARY        |  TR TL BR BL
+  menu/clk_menu  | PRIMARY        |  TL BL
+  sonido/bpm     | PRIMARY        |  TR
   presente_Z[2]  | LW             |  -
   gw_gao_inst_0/gao_jtag_reset| LW             |  -
   fsm/clk_WL     | LW             |  -
   puntaje/clk_puntaje| LW             |  -
-  sonido/bpm     | LW             |  -
+  sonido/clk_1000hz| LW             |  -
   ===========================================
 
 
