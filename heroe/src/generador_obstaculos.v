@@ -74,20 +74,13 @@ module generador_obstaculos #(
     endcase
   end
 
-  reg [2:0] mundo_ant;
 
+  reg [2:0] mundo_ant;
+  reg [4:0] show_leds = 5'd0;
+  reg [4:0] show_leds_out;
   always @(posedge clk_obstaculos) begin
     if (presente == GAME && W_or_L == 2'b00) begin
       if (!condicion) begin
-        // case (mundo)
-        //   2'd1: begin
-        //     conteo_obs <= mundo2;
-        //   end
-        //   2'd2: begin
-        //     conteo_obs <= mundo3;
-        //   end
-        //   default: conteo_obs <= mundo1;
-        // endcase
         mundo_ant <= mundo;
         conteo_obs <= valor_obs;
         r_reg <= world_counter;
@@ -151,6 +144,40 @@ module generador_obstaculos #(
 
     if (world_counter == 4'd15) world_counter <= 4'd1;
     else world_counter <= world_counter + 1'd1;
+
+    if (W_or_L == 2'b10) begin
+      show_leds <= show_leds + 1'b1;
+      case (show_leds)
+        5'd0: show_leds_out <= 5'b10011;
+        5'd1: show_leds_out <= 5'b11111;
+        5'd2: show_leds_out <= 5'b00111;
+        5'd3: show_leds_out <= 5'b11100;
+        5'd4: show_leds_out <= 5'b10011;
+        5'd5: show_leds_out <= 5'b01001;
+        5'd6: show_leds_out <= 5'b11010;
+        5'd7: show_leds_out <= 5'b11010;
+        5'd8: show_leds_out <= 5'b00111;
+        5'd9: show_leds_out <= 5'b11101;
+        5'd10: show_leds_out <= 5'b00011;
+        5'd11: show_leds_out <= 5'b11100;
+        5'd12: show_leds_out <= 5'b00100;
+        5'd13: show_leds_out <= 5'b11010;
+        5'd14: show_leds_out <= 5'b10111;
+        5'd15: show_leds_out <= 5'b11101;
+        5'd16: show_leds_out <= 5'b01011;
+        5'd17: show_leds_out <= 5'b11100;
+        5'd18: show_leds_out <= 5'b00011;
+        5'd19: show_leds_out <= 5'b11111;
+        5'd20: show_leds_out <= 5'b11010;
+        5'd21: show_leds_out <= 5'b10111;
+        5'd22: show_leds_out <= 5'b11101;
+        5'd23: show_leds_out <= 5'b01011;
+        5'd24: show_leds_out <= 5'b11100;
+        5'd25: show_leds_out <= 5'b00011;
+        5'd26: show_leds_out <= 5'b11111;
+        default: show_leds_out <= 5'b11111;
+      endcase
+    end else show_leds <= 5'd0;
   end
 
   assign feedback_value = r_reg[3] ^ r_reg[2] ^ r_reg[0];
@@ -158,36 +185,40 @@ module generador_obstaculos #(
 
 
   always @(*) begin
-    case (mundo)
-      2'd0: begin
-        if (conteo_obs < ((20 * mundo1) / 100)) progreso = ~5'b11111;
-        else if (conteo_obs < ((35 * mundo1) / 100)) progreso = ~5'b01111;
-        else if (conteo_obs < ((55 * mundo1) / 100)) progreso = ~5'b00111;
-        else if (conteo_obs < ((80 * mundo1) / 100)) progreso = ~5'b00011;
-        else if (conteo_obs < ((95 * mundo1) / 100)) progreso = ~5'b00001;
-        else progreso = ~5'b00000;
-      end
+    if (W_or_L == 2'b00) begin
+      case (mundo)
+        2'd0: begin
+          if (conteo_obs < ((20 * mundo1) / 100)) progreso = ~5'b11111;
+          else if (conteo_obs < ((35 * mundo1) / 100)) progreso = ~5'b01111;
+          else if (conteo_obs < ((55 * mundo1) / 100)) progreso = ~5'b00111;
+          else if (conteo_obs < ((80 * mundo1) / 100)) progreso = ~5'b00011;
+          else if (conteo_obs < ((95 * mundo1) / 100)) progreso = ~5'b00001;
+          else progreso = ~5'b00000;
+        end
 
-      2'd1: begin
-        if (conteo_obs < ((15 * mundo2) / 100)) progreso = ~5'b11111;
-        else if (conteo_obs < ((25 * mundo2) / 100)) progreso = ~5'b01111;
-        else if (conteo_obs < ((40 * mundo2) / 100)) progreso = ~5'b00111;
-        else if (conteo_obs < ((60 * mundo2) / 100)) progreso = ~5'b00011;
-        else if (conteo_obs < ((85 * mundo2) / 100)) progreso = ~5'b00001;
-        else progreso = ~5'b00000;
-      end
+        2'd1: begin
+          if (conteo_obs < ((15 * mundo2) / 100)) progreso = ~5'b11111;
+          else if (conteo_obs < ((25 * mundo2) / 100)) progreso = ~5'b01111;
+          else if (conteo_obs < ((40 * mundo2) / 100)) progreso = ~5'b00111;
+          else if (conteo_obs < ((60 * mundo2) / 100)) progreso = ~5'b00011;
+          else if (conteo_obs < ((85 * mundo2) / 100)) progreso = ~5'b00001;
+          else progreso = ~5'b00000;
+        end
 
-      2'd2: begin
-        if (conteo_obs < ((5 * mundo3) / 100)) progreso = ~5'b11111;
-        else if (conteo_obs < ((20 * mundo3) / 100)) progreso = ~5'b01111;
-        else if (conteo_obs < ((35 * mundo3) / 100)) progreso = ~5'b00111;
-        else if (conteo_obs < ((50 * mundo3) / 100)) progreso = ~5'b00011;
-        else if (conteo_obs < ((80 * mundo3) / 100)) progreso = ~5'b00001;
-        else progreso = ~5'b00000;
-      end
+        2'd2: begin
+          if (conteo_obs < ((5 * mundo3) / 100)) progreso = ~5'b11111;
+          else if (conteo_obs < ((20 * mundo3) / 100)) progreso = ~5'b01111;
+          else if (conteo_obs < ((35 * mundo3) / 100)) progreso = ~5'b00111;
+          else if (conteo_obs < ((50 * mundo3) / 100)) progreso = ~5'b00011;
+          else if (conteo_obs < ((80 * mundo3) / 100)) progreso = ~5'b00001;
+          else progreso = ~5'b00000;
+        end
 
-      default: progreso = ~5'b00000;
-    endcase
+        default: progreso = ~5'b00000;
+      endcase
+    end else if (W_or_L == 2'b10) begin
+      progreso = ~show_leds_out;
+    end else progreso = ~5'b00000;
   end
 
 endmodule

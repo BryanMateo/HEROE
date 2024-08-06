@@ -5,7 +5,7 @@
  "CRC_CHECK" : true,
  "Clock_Route_Order" : 0,
  "Correct_Hold_Violation" : true,
- "DONE" : false,
+ "DONE" : true,
  "DOWNLOAD_SPEED" : "default",
  "Disable_Insert_Pad" : false,
  "ENABLE_CTP" : false,

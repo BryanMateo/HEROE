@@ -113,7 +113,7 @@ module sonido #(
   reg [5:0] sel, sel1;
   always @(posedge bpm) begin
 
-    if (W_or_L == 2'b10) begin
+    if (W_or_L == 2'b10 && presente == WL) begin
       if (sel1 == 6'd37) begin
         sel1 <= 6'd0;
       end else begin
@@ -165,7 +165,7 @@ module sonido #(
       sel <= 6'd0;
       sel1 <= 6'd0;
       nota_1 <= 3'd0;
-    end else if (presente == GAME) begin
+    end else if (presente == GAME && W_or_L == 2'b00) begin
       if (sel == 6'd40) begin
         sel <= 6'd0;
       end else begin
@@ -229,7 +229,4 @@ module sonido #(
     if (counterbpm >= (DIVISORbpm - 1)) counterbpm <= 2;
     bpm <= (counterbpm < DIVISORbpm / 2) ? 1'b1 : 1'b0;
   end
-
 endmodule
-
-

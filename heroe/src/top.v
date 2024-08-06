@@ -5,8 +5,10 @@ module top (
     output [6:0] displayout,
     output wire [7:0] selector,
     output buzzer,
-    output buzzer1,
+    buzzer1,
+    led_encendido,
     output [4:0] progreso
+
 );
   wire [4:0] key;
   wire keypad_pressed;
@@ -48,7 +50,8 @@ module top (
       .display_obs(display_obs),
       .display_puntaje(display_puntaje),
       .displayout(displayout),
-      .selector(selector)
+      .selector(selector),
+      .led_encendido(led_encendido)
   );
 
   menu menu (

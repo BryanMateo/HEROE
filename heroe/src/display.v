@@ -6,7 +6,8 @@ module display (
     input [20:0] display_obs,
     input [20:0] display_puntaje,
     output reg [6:0] displayout,
-    output reg [7:0] selector
+    output reg [7:0] selector,
+    output reg led_encendido
 
 );
   reg [6:0]
@@ -108,6 +109,9 @@ module display (
         display7 <= 7'd0;
       end
     endcase
+
+    if (presente == OFF) led_encendido <= 1'b0;
+    else led_encendido <= 1'b1;
   end
 
   reg clk_barrido;

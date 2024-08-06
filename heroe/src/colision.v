@@ -15,39 +15,104 @@ module colision #(
     output reg [1:0] W_or_L = 2'b00,
     output reg bono_tomado = 1'b0
 );
-
   always @(negedge clk_obstaculos) begin
     if (presente == GAME || presente == WL) begin
       if (mundo == 2'd3) begin
         W_or_L = 2'b10;
       end
-      // if (display_obs[6] == 1'b1 && heroe[6] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[5] == 1'b1 && heroe[5] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[4] == 1'b1 && heroe[4] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[3] == 1'b1 && heroe[3] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[2] == 1'b1 && heroe[2] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[1] == 1'b1 && heroe[1] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end else if (display_obs[0] == 1'b1 && heroe[0] == 1'b1) begin
-      //   W_or_L = 2'b01;
-      // end
+
+      case (display_obs[6:0])
+        7'b1100011: begin
+          if (heroe != 7'b0001000) W_or_L <= 2'b01;
+        end
+        7'b1011100: begin
+          if (heroe != 7'b0000001) W_or_L <= 2'b01;
+        end
+        7'b0001001: begin
+          if (heroe != 7'b1000000) W_or_L <= 2'b01;
+        end
+        7'b0011000: begin
+          if (heroe == 7'b1000000) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b0100001: begin
+          if (heroe == 7'b1000000) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0001000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b0100000: begin
+          if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0001000) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b1000000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b1000000: begin
+          if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0001000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b0001000: begin
+          if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b1000000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b1010000: begin
+          if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0001000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        7'b1010000: begin
+          if (heroe == 7'b0000001) begin
+            W_or_L <= 2'b00;
+          end else if (heroe == 7'b0001000) begin
+            W_or_L <= 2'b00;
+          end else W_or_L <= 2'b01;
+        end
+        default: begin
+          //nada
+        end
+      endcase
     end else begin
-      W_or_L = 2'b00;
+      W_or_L <= 2'b00;
     end
+
+    // if (display_obs[6] == 1'b1 && heroe[6] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[5] == 1'b1 && heroe[5] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[4] == 1'b1 && heroe[4] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[3] == 1'b1 && heroe[3] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[2] == 1'b1 && heroe[2] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[1] == 1'b1 && heroe[1] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end else if (display_obs[0] == 1'b1 && heroe[0] == 1'b1) begin
+    //   W_or_L <= 2'b01;
+    // end
+    // end else begin
+    //   W_or_L = 2'b00;
+    // end
 
     if (presente == GAME) begin
       if (display_obs[6:0] == 7'b1111111) begin
         bono_tomado <= 1'b1;
       end else bono_tomado <= 1'b0;
     end else bono_tomado <= 1'b0;
-
   end
-
-
-
 endmodule

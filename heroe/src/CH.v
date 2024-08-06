@@ -6,14 +6,12 @@ module choose_hero (
     output reg [2:0] tipo_h,
     output reg [1:0] var_h
 );
-
   parameter OFF = 3'd0;
   parameter WLCM = 3'd1;
   parameter CH = 3'd2;
   parameter GAME = 3'd3;
   parameter WL = 3'd4;
   parameter PA = 3'd5;
-
   reg conmutacion = 1'b0;
 
   always @(posedge clk) begin
@@ -67,10 +65,7 @@ module choose_hero (
             end
           end
         end
-
-        default: begin
-          if (tipo_h > 3'd4) tipo_h <= 3'd0;
-        end
+        default: if (tipo_h > 3'd4) tipo_h <= 3'd0;
       endcase
     end else begin
       conmutacion <= 1'b0;
@@ -79,9 +74,5 @@ module choose_hero (
       end
     end
     ////////////////////////////////////////////
-
-
-
   end
-
 endmodule

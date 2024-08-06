@@ -5,7 +5,7 @@
 //Part Number: GW2A-LV18PG256C8/I7
 //Device: GW2A-18
 //Device Version: C
-//Created Time: Mon 08 05 19:55:50 2024
+//Created Time: Mon 08 05 21:22:15 2024
 
 IO_LOC "progreso[4]" L16;
 IO_PORT "progreso[4]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
@@ -17,6 +17,8 @@ IO_LOC "progreso[1]" N16;
 IO_PORT "progreso[1]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "progreso[0]" A13;
 IO_PORT "progreso[0]" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "led_encendido" C13;
+IO_PORT "led_encendido" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "buzzer1" D11;
 IO_PORT "buzzer1" IO_TYPE=LVCMOS18 PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
 IO_LOC "buzzer" N7;
