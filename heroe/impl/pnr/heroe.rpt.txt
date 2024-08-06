@@ -12,25 +12,25 @@
   <Part Number>: GW2A-LV18PG256C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Mon Aug  5 18:41:50 2024
+  <Created Time>:Mon Aug  5 19:56:02 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.237s, Elapsed time = 0h 0m 0.237s
-    Placement Phase 1: CPU time = 0h 0m 0.531s, Elapsed time = 0h 0m 0.531s
-    Placement Phase 2: CPU time = 0h 0m 0.507s, Elapsed time = 0h 0m 0.507s
+    Placement Phase 0: CPU time = 0h 0m 0.256s, Elapsed time = 0h 0m 0.256s
+    Placement Phase 1: CPU time = 0h 0m 0.466s, Elapsed time = 0h 0m 0.465s
+    Placement Phase 2: CPU time = 0h 0m 0.409s, Elapsed time = 0h 0m 0.409s
     Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Total Placement: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-    Routing Phase 1: CPU time = 0h 0m 0.286s, Elapsed time = 0h 0m 0.286s
+    Routing Phase 1: CPU time = 0h 0m 0.266s, Elapsed time = 0h 0m 0.266s
     Routing Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
     Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
  Generate output files:
-    CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
+    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 
  Total Time and Memory Usage: CPU time = 0h 0m 10s, Elapsed time = 0h 0m 10s, Peak memory usage = 443MB
 
@@ -40,19 +40,19 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 1330/20736  7%
-    --LUT,ALU,ROM16           | 1330(1018 LUT, 312 ALU, 0 ROM16)
+  Logic                       | 1467/20736  8%
+    --LUT,ALU,ROM16           | 1467(1081 LUT, 386 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 791/16173  5%
+  Register                    | 860/16173  6%
     --Logic Register as Latch | 0/15552  0%
-    --Logic Register as FF    | 776/15552  5%
+    --Logic Register as FF    | 845/15552  6%
     --I/O Register as Latch   | 0/621  0%
     --I/O Register as FF      | 15/621  3%
-  CLS                         | 877/10368  9%
-  I/O Port                    | 34
-  I/O Buf                     | 34
+  CLS                         | 961/10368  10%
+  I/O Port                    | 35
+  I/O Buf                     | 35
     --Input Buf               | 8
-    --Output Buf              | 26
+    --Output Buf              | 27
     --Inout Buf               | 0
   IOLOGIC                     | 0%
   BSRAM                       | 3%
@@ -82,7 +82,7 @@
   bank 4   | 0/36(0%)    
   bank 5   | 0/36(0%)    
   bank 6   | 0/18(0%)    
-  bank 7   | 5/16(31%)   
+  bank 7   | 6/16(37%)   
   =======================
 
 
@@ -92,7 +92,7 @@
   Global Clock  | Usage       
   -------------------------------
   PRIMARY       | 8/8(100%)
-  LW            | 4/8(50%)
+  LW            | 5/8(63%)
   GCLK_PIN      | 2/8(25%)
   PLL           | 0/4(0%)
   CLKDIV        | 0/8(0%)
@@ -106,17 +106,18 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  fsm_0_2        | PRIMARY        |  TR
+  fsm_0_2        | PRIMARY        |  TR TL
   clk_obstaculos_Z| PRIMARY        |  TR TL
   gw_gao_inst_0/control0[0]| PRIMARY        |  TR BR
-  keypad/clk_key | PRIMARY        |  BR BL
+  keypad/clk_key | PRIMARY        |  BR
   display/clk_barrido| PRIMARY        |  TR TL BR
-  menu/clk_menu  | PRIMARY        |  TL BL
+  menu/clk_menu  | PRIMARY        |  BL
   sonido/clk_1000hz| PRIMARY        |  BR
   presente_Z[2]  | LW             |  -
   gw_gao_inst_0/gao_jtag_reset| LW             |  -
   fsm/clk_WL     | LW             |  -
   puntaje/clk_puntaje| LW             |  -
+  sonido/bpm     | LW             |  -
   ===========================================
 
 
@@ -153,6 +154,7 @@ selector[5]    |           | A15/7         | Y          | out   | IOL2[B]  | LVC
 selector[6]    |           | N9/3          | Y          | out   | IOR36[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 selector[7]    |           | C12/7         | Y          | out   | IOL7[A]  | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 buzzer         |           | N7/3          | Y          | out   | IOR47[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
+buzzer1        |           | D11/7         | Y          | out   | IOL22[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 progreso[0]    |           | A13/3         | Y          | out   | IOR32[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8       
 progreso[1]    |           | N16/1         | Y          | out   | IOT52[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
 progreso[2]    |           | N14/1         | Y          | out   | IOT52[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 1.8       
@@ -305,7 +307,7 @@ A11/7    | -              | in    | IOL15[A] | LVCMOS18 | NA    | UP        | ON
 C11/7    | -              | in    | IOL15[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 D10/7    | -              | in    | IOL17[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 E10/7    | -              | in    | IOL17[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
-D11/7    | -              | in    | IOL22[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
+D11/7    | buzzer1        | out   | IOL22[A] | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 1.8  
 A9/7     | -              | in    | IOL27[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 C9/7     | -              | in    | IOL27[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  
 C8/6     | -              | in    | IOL29[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.8  

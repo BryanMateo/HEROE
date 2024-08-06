@@ -5,29 +5,23 @@ module top (
     output [6:0] displayout,
     output wire [7:0] selector,
     output buzzer,
+    output buzzer1,
     output [4:0] progreso
 );
   wire [4:0] key;
   wire keypad_pressed;
-
   wire [2:0] tipo_h;
   wire [1:0] var_h;
   wire [6:0] heroe;
-
   wire [4:0] tipo_obs;
   wire [6:0] obstaculo;
-
   wire [1:0] W_or_L;
   wire [2:0] presente;
   wire [27:0] display_menu;
-
   wire [20:0] display_obs;
-
   wire [1:0] mundo;
   wire bono_tomado;
-
   wire clk_obstaculos;
-
   wire [20:0] display_puntaje;
 
   fsm fsm (
@@ -120,7 +114,8 @@ module top (
       .keypad_pressed(keypad_pressed),
       .presente(presente),
       .W_or_L(W_or_L),
-      .buzzer(buzzer)
+      .buzzer(buzzer),
+      .buzzer1(buzzer1)
   );
 
 endmodule

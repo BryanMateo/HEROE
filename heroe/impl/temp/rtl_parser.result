@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 33,
+    "InstLine" : 27,
     "InstName" : "fsm",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/fsm.v",
     "ModuleLine" : 1,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 41,
+    "InstLine" : 35,
     "InstName" : "keypad",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/keypad.v",
     "ModuleLine" : 1,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 49,
+    "InstLine" : 43,
     "InstName" : "display",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/display.v",
     "ModuleLine" : 1,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 60,
+    "InstLine" : 54,
     "InstName" : "menu",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/menu.v",
     "ModuleLine" : 1,
@@ -41,7 +41,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 67,
+    "InstLine" : 61,
     "InstName" : "rom_heroe",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_heroe.v",
     "ModuleLine" : 1,
@@ -49,7 +49,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 73,
+    "InstLine" : 67,
     "InstName" : "choose_hero",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/CH.v",
     "ModuleLine" : 1,
@@ -57,7 +57,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 82,
+    "InstLine" : 76,
     "InstName" : "generador_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/generador_obstaculos.v",
     "ModuleLine" : 1,
@@ -65,7 +65,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 95,
+    "InstLine" : 89,
     "InstName" : "rom_obstaculos",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/rom_obstaculos.v",
     "ModuleLine" : 1,
@@ -73,7 +73,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 100,
+    "InstLine" : 94,
     "InstName" : "colision",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/colision.v",
     "ModuleLine" : 1,
@@ -81,7 +81,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 110,
+    "InstLine" : 104,
     "InstName" : "puntaje",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/puntaje.v",
     "ModuleLine" : 1,
@@ -89,7 +89,7 @@
    },
    {
     "InstFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/top.v",
-    "InstLine" : 118,
+    "InstLine" : 112,
     "InstName" : "sonido",
     "ModuleFile" : "C:/Users/Bryan/Desktop/Gowin-Proyectos/HEROE/heroe/src/sonido.v",
     "ModuleLine" : 1,
