@@ -188,37 +188,37 @@ module generador_obstaculos #(
     if (W_or_L == 2'b00) begin
       case (mundo)
         2'd0: begin
-          if (conteo_obs < ((20 * mundo1) / 100)) progreso = ~5'b11111;
-          else if (conteo_obs < ((35 * mundo1) / 100)) progreso = ~5'b01111;
-          else if (conteo_obs < ((55 * mundo1) / 100)) progreso = ~5'b00111;
-          else if (conteo_obs < ((80 * mundo1) / 100)) progreso = ~5'b00011;
-          else if (conteo_obs < ((95 * mundo1) / 100)) progreso = ~5'b00001;
-          else progreso = ~5'b00000;
+          if (conteo_obs < ((20 * mundo1) / 100)) progreso = 5'b11111;
+          else if (conteo_obs < ((35 * mundo1) / 100)) progreso = 5'b01111;
+          else if (conteo_obs < ((55 * mundo1) / 100)) progreso = 5'b00111;
+          else if (conteo_obs < ((80 * mundo1) / 100)) progreso = 5'b00011;
+          else if (conteo_obs < ((95 * mundo1) / 100)) progreso = 5'b00001;
+          else progreso = 5'b00000;
         end
 
         2'd1: begin
-          if (conteo_obs < ((15 * mundo2) / 100)) progreso = ~5'b11111;
-          else if (conteo_obs < ((25 * mundo2) / 100)) progreso = ~5'b01111;
-          else if (conteo_obs < ((40 * mundo2) / 100)) progreso = ~5'b00111;
-          else if (conteo_obs < ((60 * mundo2) / 100)) progreso = ~5'b00011;
-          else if (conteo_obs < ((85 * mundo2) / 100)) progreso = ~5'b00001;
-          else progreso = ~5'b00000;
+          if (conteo_obs < ((15 * mundo2) / 100)) progreso = 5'b11111;
+          else if (conteo_obs < ((25 * mundo2) / 100)) progreso = 5'b01111;
+          else if (conteo_obs < ((40 * mundo2) / 100)) progreso = 5'b00111;
+          else if (conteo_obs < ((60 * mundo2) / 100)) progreso = 5'b00011;
+          else if (conteo_obs < ((85 * mundo2) / 100)) progreso = 5'b00001;
+          else progreso = 5'b00000;
         end
 
         2'd2: begin
-          if (conteo_obs < ((5 * mundo3) / 100)) progreso = ~5'b11111;
-          else if (conteo_obs < ((20 * mundo3) / 100)) progreso = ~5'b01111;
-          else if (conteo_obs < ((35 * mundo3) / 100)) progreso = ~5'b00111;
-          else if (conteo_obs < ((50 * mundo3) / 100)) progreso = ~5'b00011;
-          else if (conteo_obs < ((80 * mundo3) / 100)) progreso = ~5'b00001;
-          else progreso = ~5'b00000;
+          if (conteo_obs < ((5 * mundo3) / 100)) progreso = 5'b11111;
+          else if (conteo_obs < ((20 * mundo3) / 100)) progreso = 5'b01111;
+          else if (conteo_obs < ((35 * mundo3) / 100)) progreso = 5'b00111;
+          else if (conteo_obs < ((50 * mundo3) / 100)) progreso = 5'b00011;
+          else if (conteo_obs < ((80 * mundo3) / 100)) progreso = 5'b00001;
+          else progreso = 5'b00000;
         end
 
-        default: progreso = ~5'b00000;
+        default: progreso = 5'b00000;
       endcase
     end else if (W_or_L == 2'b10) begin
       progreso = ~show_leds_out;
-    end else progreso = ~5'b00000;
+    end else progreso = 5'b00000;
   end
 
 endmodule

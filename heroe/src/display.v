@@ -110,8 +110,8 @@ module display (
       end
     endcase
 
-    if (presente == OFF) led_encendido <= 1'b0;
-    else led_encendido <= 1'b1;
+    if (presente == OFF) led_encendido <= 1'b1;
+    else led_encendido <= 1'b0;
   end
 
   reg clk_barrido;

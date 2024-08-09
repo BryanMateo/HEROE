@@ -98,7 +98,7 @@ module fsm (
 
       WL: begin
         case (W_or_L)
-          2'b01:   if (TIMER_WL == 4'd15) futuro = PA;  // timer para LOST
+          2'b01:   if (TIMER_WL == 4'd5) futuro = PA;  // timer para LOST
           2'b10:   if (TIMER_WL == 4'd15) futuro = PA;  // timer para WIN
           default: futuro = WL;
         endcase

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="551(0)" T_Alu="328(0)" T_Lut="803(0)">
-    <SubModule name="fsm" Register="41" Alu="27" Lut="57" T_Register="41(41)" T_Alu="27(27)" T_Lut="57(57)"/>
-    <SubModule name="keypad" Register="43" Alu="27" Lut="50" T_Register="43(43)" T_Alu="27(27)" T_Lut="50(50)"/>
-    <SubModule name="display" Register="104" Alu="27" Lut="236" T_Register="104(104)" T_Alu="27(27)" T_Lut="236(236)"/>
-    <SubModule name="menu" Register="65" Alu="30" Lut="94" T_Register="65(65)" T_Alu="30(30)" T_Lut="94(94)"/>
-    <SubModule name="choose_hero" Register="6" Lut="20" T_Register="6(6)" T_Lut="20(20)"/>
-    <SubModule name="generador_obstaculos" Register="92" Alu="31" Lut="145" T_Register="92(92)" T_Alu="31(31)" T_Lut="145(145)"/>
-    <SubModule name="colision" Register="3" Lut="25" T_Register="3(3)" T_Lut="25(25)"/>
-    <SubModule name="puntaje" Register="48" Alu="35" Lut="55" T_Register="48(48)" T_Alu="35(35)" T_Lut="55(55)"/>
-    <SubModule name="sonido" Register="149" Alu="151" Lut="121" T_Register="149(149)" T_Alu="151(151)" T_Lut="121(121)"/>
+<Module name="top" T_Register="551(0)" T_Alu="328(0)" T_Lut="750(0)">
+    <SubModule name="fsm" Register="41" Alu="27" Lut="56" T_Register="41(41)" T_Alu="27(27)" T_Lut="56(56)"/>
+    <SubModule name="keypad" Register="43" Alu="27" Lut="49" T_Register="43(43)" T_Alu="27(27)" T_Lut="49(49)"/>
+    <SubModule name="display" Register="104" Alu="27" Lut="196" T_Register="104(104)" T_Alu="27(27)" T_Lut="196(196)"/>
+    <SubModule name="menu" Register="65" Alu="30" Lut="92" T_Register="65(65)" T_Alu="30(30)" T_Lut="92(92)"/>
+    <SubModule name="choose_hero" Register="6" Lut="19" T_Register="6(6)" T_Lut="19(19)"/>
+    <SubModule name="generador_obstaculos" Register="92" Alu="31" Lut="142" T_Register="92(92)" T_Alu="31(31)" T_Lut="142(142)"/>
+    <SubModule name="colision" Register="3" Lut="20" T_Register="3(3)" T_Lut="20(20)"/>
+    <SubModule name="puntaje" Register="48" Alu="35" Lut="54" T_Register="48(48)" T_Alu="35(35)" T_Lut="54(54)"/>
+    <SubModule name="sonido" Register="149" Alu="151" Lut="122" T_Register="149(149)" T_Alu="151(151)" T_Lut="122(122)"/>
 </Module>
